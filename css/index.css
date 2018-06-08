@@ -1,0 +1,6 @@
+.header-background {
+  background: url("../image/Home/navigation.jpg") center/cover;
+  height: 800px; }
+
+.background-greenery, .nav-bar-background--scrolled {
+  background-color: #88b04b; }

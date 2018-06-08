@@ -1,0 +1,14 @@
+$greenery:rgba(136,176,75,1);
+.header-background
+{
+    background: url('../image/Home/navigation.jpg') center / cover;
+    height: 800px;
+}
+.background-greenery
+{
+    background-color: $greenery;
+}
+.nav-bar-background--scrolled 
+{
+    @extend .background-greenery;
+}

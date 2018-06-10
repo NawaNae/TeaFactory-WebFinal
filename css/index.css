@@ -9,24 +9,33 @@
 .background-greenery, .nav-bar-background--scrolled {
   background-color: #88b04b; }
 
-.news.card {
+.news {
   background-color: #b6d7a8; }
   @media only screen and (min-width: 840px) {
-    .news.card .card {
+    .news .card {
       height: 200px; }
-      .news.card .card img {
+      .news .card img {
         width: 200px;
         height: 200px; } }
   @media only screen and (min-width: 480px) {
-    .news.card .card {
+    .news .card {
       min-height: 200px;
       text-align: center; }
-      .news.card .card img {
+      .news .card img {
         width: 200px;
         height: 200px; } }
   @media only screen and (max-width: 497px) {
-    .news.card .card {
+    .news .card {
       min-height: 200px;
       text-align: center; }
-      .news.card .card img {
+      .news .card img {
         width: 100%; } }
+
+.medals {
+  background-color: #b6d7a8; }
+  .medals .mdl-grid {
+    width: 100%; }
+  @media only screen and (min-width: 840px) {
+    .medals .card img {
+      width: 400px;
+      height: 550px; } }

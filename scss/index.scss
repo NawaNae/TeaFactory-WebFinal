@@ -18,7 +18,7 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 {
     @extend .background-greenery;
 }
-.news.card
+.news
 {
     background-color: $background-green;
     @include breakpoint(pc)
@@ -55,6 +55,25 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
             img
             {
                 width: 100%;;
+            }
+        }
+    }
+}
+.medals
+{
+    background-color: $background-green;
+    .mdl-grid
+    {
+        width:100%;
+    }
+    .card
+    {
+        img
+        {
+            @include breakpoint(pc)
+            {
+                width:400px;
+                height: 550px;
             }
         }
     }

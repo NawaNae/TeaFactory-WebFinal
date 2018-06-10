@@ -1,4 +1,10 @@
-$greenery:rgba(136,176,75,1);
+@import "break-point";
+$greenery:rgba(136,176,75,1); 
+$background-green:#b6d7a8;
+$normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
+*{
+    font-family: $normal-font-family;
+}
 .header-background
 {
     background: url('../image/Home/navigation.jpg') center / cover;
@@ -11,4 +17,45 @@ $greenery:rgba(136,176,75,1);
 .nav-bar-background--scrolled 
 {
     @extend .background-greenery;
+}
+.news.card
+{
+    background-color: $background-green;
+    @include breakpoint(pc)
+    {
+        .card
+        {
+            height: 200px;
+            img
+            {
+                width:200px;
+                height: 200px;
+            }
+        }
+    }
+    @include breakpoint(tablet)
+    {
+        .card
+        {
+            min-height: 200px;
+            text-align: center;
+            img
+            {
+                width:200px;
+                height: 200px;
+            }
+        }
+    }
+    @include breakpoint(phone)
+    {
+        .card
+        {
+            min-height: 200px;
+            text-align: center;
+            img
+            {
+                width: 100%;;
+            }
+        }
+    }
 }

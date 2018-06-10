@@ -1,6 +1,32 @@
+@charset "UTF-8";
+* {
+  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
+
 .header-background {
   background: url("../image/Home/navigation.jpg") center/cover;
   height: 800px; }
 
 .background-greenery, .nav-bar-background--scrolled {
   background-color: #88b04b; }
+
+.news.card {
+  background-color: #b6d7a8; }
+  @media only screen and (min-width: 840px) {
+    .news.card .card {
+      height: 200px; }
+      .news.card .card img {
+        width: 200px;
+        height: 200px; } }
+  @media only screen and (min-width: 480px) {
+    .news.card .card {
+      min-height: 200px;
+      text-align: center; }
+      .news.card .card img {
+        width: 200px;
+        height: 200px; } }
+  @media only screen and (max-width: 497px) {
+    .news.card .card {
+      min-height: 200px;
+      text-align: center; }
+      .news.card .card img {
+        width: 100%; } }

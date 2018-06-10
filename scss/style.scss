@@ -1,0 +1,17 @@
+$greenery:rgba(136,176,75,1); 
+$normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
+*{
+    font-family: $normal-font-family;
+}
+h1,h2,h3,h4,h5,h6,.mdl-layout-title
+{
+    font-family: $normal-font-family;
+}
+.border-rect
+{
+    border-radius: 0 !important;
+}
+.border-none
+{
+    border-style: none !important;
+}

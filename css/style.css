@@ -10,3 +10,21 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 
 .border-none {
   border-style: none !important; }
+
+.bg-alpha {
+  background-color: rgba(0, 0, 0, 0) !important; }
+
+#FB-btn {
+  background-image: url("../image/facebook-box.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0); }
+
+#GPlus-btn {
+  background-image: url("../image/google-plus-box.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0); }
+
+#Twitter-btn {
+  background-image: url("../image/twitter-box.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0); }

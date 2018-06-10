@@ -35,7 +35,12 @@
   background-color: #b6d7a8; }
   .medals .mdl-grid {
     width: 100%; }
-  @media only screen and (min-width: 840px) {
-    .medals .card img {
-      width: 400px;
-      height: 550px; } }
+  .medals .card img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+    @media only screen and (min-width: 840px) {
+      .medals .card img {
+        max-width: 400px;
+        max-height: 550px;
+        width: 100%; } }

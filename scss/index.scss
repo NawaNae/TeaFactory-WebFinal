@@ -1,6 +1,5 @@
 @import "break-point";
-$greenery:rgba(136,176,75,1); 
-$background-green:#b6d7a8;
+@import "colors";
 $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 *{
     font-family: $normal-font-family;
@@ -10,14 +9,8 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
     background: url('../image/home/navigation.jpg') center / cover;
     height: 800px;
 }
-.background-greenery
-{
-    background-color: $greenery;
-}
-.nav-bar-background--scrolled 
-{
-    @extend .background-greenery;
-}
+
+
 .news
 {
     background-color: $background-green;

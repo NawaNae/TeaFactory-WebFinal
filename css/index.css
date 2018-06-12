@@ -6,9 +6,6 @@
   background: url("../image/home/navigation.jpg") center/cover;
   height: 800px; }
 
-.background-greenery, .nav-bar-background--scrolled {
-  background-color: #88b04b; }
-
 .news {
   background-color: #b6d7a8; }
   @media only screen and (min-width: 840px) {

@@ -11,8 +11,17 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .border-none {
   border-style: none !important; }
 
+.bg-greenery {
+  background-color: #88b04b; }
+
+.bg-mdlgray, .mdl-layout__header.fixed-bottom, .nav-bar-background--scrolled {
+  background-color: #424242; }
+
 .bg-alpha {
   background-color: rgba(0, 0, 0, 0) !important; }
+
+.mdl-layout__obfuscator.is-visible {
+  position: fixed; }
 
 #FB-btn {
   background-image: url("../image/icon/facebook-box.png");

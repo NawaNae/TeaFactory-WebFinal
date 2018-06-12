@@ -1,4 +1,4 @@
-$greenery:rgba(136,176,75,1); 
+@import "colors";
 $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 *{
     font-family: $normal-font-family;
@@ -15,9 +15,29 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 {
     border-style: none !important;
 }
+.bg-greenery
+{
+    background-color: $greenery;
+}
+.bg-mdlgray
+{
+    background-color: $mdlgray;
+}
 .bg-alpha
 {
     background-color: rgba(0,0,0,0) !important;
+}
+.mdl-layout__obfuscator.is-visible
+{
+    position: fixed;
+}
+.mdl-layout__header.fixed-bottom
+{
+    @extend .bg-mdlgray
+}
+.nav-bar-background--scrolled 
+{
+    @extend .bg-mdlgray;
 }
 #FB-btn
 {

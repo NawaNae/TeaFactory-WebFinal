@@ -66,3 +66,11 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
     background-size: contain;
     background-color: rgba(0,0,0,0);
 }
+.hide
+{
+    display: none !important;
+}
+.show
+{
+    display: flex !important;
+}

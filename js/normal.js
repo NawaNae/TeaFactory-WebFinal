@@ -41,14 +41,16 @@ class ScrollController
     set top(val)
     {window.pageYOffset=val;}
     get bottom()
-    {return window.pageYOffset+window.pageHeight;}
+    {return window.pageYOffset+window.innerHeight;}
+    set bottom(val)
+    {this.top=val-window.innerHeight;}
 }
 window.addEventListener("load",()=>
 {
-    var navCtrl=new NawaNawa.Classes.ScrollController();
-    NawaNawa.navScrollController=navCtrl;
-    navCtrl.header=document.querySelector("header.mdl-layout__header.fixed-top");
-    navCtrl.onScrollDown=function()
+    var topNavCtrl=new NawaNawa.Classes.ScrollController();
+    NawaNawa.navScrollController=topNavCtrl;
+    topNavCtrl.header=document.querySelector("header.mdl-layout__header.fixed-top");
+    topNavCtrl.onScrollDown=function()
     {
         var height=this.header.offsetHeight;
         if(this.top>0&&this.header.classList.contains("mdl-layout__header--transparent"))
@@ -65,7 +67,7 @@ window.addEventListener("load",()=>
                 this.header.classList.add("nav-bar-background--scrolled");
         }
     }
-    navCtrl.onScrollUp=function()
+    topNavCtrl.onScrollUp=function()
     {
         var height=this.header.offsetHeight;
         if(this.top==0&&!this.header.classList.contains("mdl-layout__header--transparent"))
@@ -82,6 +84,27 @@ window.addEventListener("load",()=>
             this.header.style.backgroundColor="rgba("+66*percent+","+66*percent+","+66*percent+","+1*percent+")";
         }
      
+    }
+    var bottomNavCtrl=new NawaNawa.Classes.ScrollController();
+    NawaNawa.navScrollController=bottomNavCtrl;
+    bottomNavCtrl.header=document.querySelector("header.mdl-layout__header.fixed-bottom");
+    bottomNavCtrl.footer=document.querySelector(".mdl-mini-footer");
+    bottomNavCtrl.onScrollDown=function()
+    {
+       if(this.bottom>=this.footer.offsetTop)
+        {
+            if(!this.header.classList.contains("hide"))
+                this.header.classList.add("hide");
+        }
+    }
+    bottomNavCtrl.onScrollUp=function()
+    {
+        if(this.bottom<=this.footer.offsetTop)
+        {
+            if(this.header.classList.contains("hide"))
+                this.header.classList.remove("hide");
+        }
+            
     }
 });
 

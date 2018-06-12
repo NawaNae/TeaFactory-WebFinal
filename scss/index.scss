@@ -1,5 +1,6 @@
 @import "break-point";
 @import "colors";
+@import "style.scss";
 $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 *{
     font-family: $normal-font-family;
@@ -9,8 +10,13 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
     background: url('../image/home/navigation.jpg') center / cover;
     height: 800px;
 }
-
-
+.index
+{
+    .card-header
+    {
+        @extend .bg-deepgreen;
+    }
+}
 .news
 {
     background-color: $background-green;

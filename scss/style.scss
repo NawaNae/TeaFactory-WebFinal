@@ -27,6 +27,11 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 {
     background-color: rgba(0,0,0,0) !important;
 }
+.bg-deepgreen
+{
+    background-color: $deepgreen;
+}
+
 .mdl-layout__obfuscator.is-visible
 {
     position: fixed;
@@ -38,6 +43,10 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 .nav-bar-background--scrolled 
 {
     @extend .bg-mdlgray;
+}
+.mdl-mini-footer
+{
+    @extend .bg-deepgreen;
 }
 #FB-btn
 {

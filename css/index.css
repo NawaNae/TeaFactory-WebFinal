@@ -2,6 +2,48 @@
 * {
   font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
 
+h1, h2, h3, h4, h5, h6, .mdl-layout-title {
+  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
+
+.border-rect {
+  border-radius: 0 !important; }
+
+.border-none {
+  border-style: none !important; }
+
+.bg-greenery {
+  background-color: #88b04b; }
+
+.bg-mdlgray, .mdl-layout__header.fixed-bottom, .nav-bar-background--scrolled {
+  background-color: #424242; }
+
+.bg-alpha {
+  background-color: rgba(0, 0, 0, 0) !important; }
+
+.bg-deepgreen, .mdl-mini-footer, .index .card-header {
+  background-color: #93c47d; }
+
+.mdl-layout__obfuscator.is-visible {
+  position: fixed; }
+
+#FB-btn {
+  background-image: url("../image/icon/facebook-box.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0); }
+
+#GPlus-btn {
+  background-image: url("../image/icon/google-plus-box.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0); }
+
+#Twitter-btn {
+  background-image: url("../image/icon/twitter-box.png");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0); }
+
+* {
+  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
+
 .header-background {
   background: url("../image/home/navigation.jpg") center/cover;
   height: 800px; }

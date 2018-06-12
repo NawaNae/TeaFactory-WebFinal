@@ -20,6 +20,9 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .bg-alpha {
   background-color: rgba(0, 0, 0, 0) !important; }
 
+.bg-deepgreen, .mdl-mini-footer {
+  background-color: #93c47d; }
+
 .mdl-layout__obfuscator.is-visible {
   position: fixed; }
 

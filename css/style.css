@@ -15,16 +15,16 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
   background-color: rgba(0, 0, 0, 0) !important; }
 
 #FB-btn {
-  background-image: url("../image/facebook-box.png");
+  background-image: url("../image/icon/facebook-box.png");
   background-size: contain;
   background-color: rgba(0, 0, 0, 0); }
 
 #GPlus-btn {
-  background-image: url("../image/google-plus-box.png");
+  background-image: url("../image/icon/google-plus-box.png");
   background-size: contain;
   background-color: rgba(0, 0, 0, 0); }
 
 #Twitter-btn {
-  background-image: url("../image/twitter-box.png");
+  background-image: url("../image/icon/twitter-box.png");
   background-size: contain;
   background-color: rgba(0, 0, 0, 0); }

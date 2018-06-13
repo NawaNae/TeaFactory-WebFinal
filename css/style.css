@@ -11,20 +11,26 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .border-none {
   border-style: none !important; }
 
-.bg-greenery {
+.bg-greenery, .nav-bar-background--scrolled, .mdl-layout__header.fixed-bottom {
   background-color: #88b04b; }
 
-.bg-mdlgray, .mdl-layout__header.fixed-bottom, .nav-bar-background--scrolled {
+.bg-mdlgray, .mdl-mini-footer {
   background-color: #424242; }
 
 .bg-alpha {
   background-color: rgba(0, 0, 0, 0) !important; }
 
-.bg-deepgreen, .mdl-mini-footer {
+.bg-deepgreen {
   background-color: #93c47d; }
 
 .mdl-layout__obfuscator.is-visible {
   position: fixed; }
+
+.mdl-layout-title .mdl-layout-title__link {
+  color: white; }
+
+.mdl-layout__drawer .mdl-layout-title .mdl-layout-title__link {
+  color: #424242; }
 
 #FB-btn {
   background-image: url("../image/icon/facebook-box.png");

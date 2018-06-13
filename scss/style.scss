@@ -36,17 +36,43 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 {
     position: fixed;
 }
-.mdl-layout__header.fixed-bottom
-{
-    @extend .bg-mdlgray
-}
+
 .nav-bar-background--scrolled 
 {
-    @extend .bg-mdlgray;
+    @extend .bg-greenery;
+}
+.mdl-layout__header.fixed-bottom
+{
+    @extend .nav-bar-background--scrolled;
 }
 .mdl-mini-footer
 {
-    @extend .bg-deepgreen;
+    @extend .bg-mdlgray;
+}
+.mdl-layout-title
+{
+    .mdl-layout-title__link
+    {
+        color:white;
+        &:hover
+        {
+
+        }
+    }
+}
+.mdl-layout__drawer
+{
+    .mdl-layout-title
+    {
+        .mdl-layout-title__link
+        {
+            color:$mdlgray;
+            &:hover
+            {
+
+            }
+        }
+    }
 }
 #FB-btn
 {

@@ -26,6 +26,12 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .mdl-layout__obfuscator.is-visible {
   position: fixed; }
 
+.mdl-layout-title .mdl-layout-title__link {
+  color: white; }
+
+.mdl-layout__drawer .mdl-layout-title .mdl-layout-title__link {
+  color: #424242; }
+
 #FB-btn {
   background-image: url("../image/icon/facebook-box.png");
   background-size: contain;

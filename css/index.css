@@ -11,16 +11,16 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .border-none {
   border-style: none !important; }
 
-.bg-greenery {
+.bg-greenery, .nav-bar-background--scrolled, .mdl-layout__header.fixed-bottom {
   background-color: #88b04b; }
 
-.bg-mdlgray, .mdl-layout__header.fixed-bottom, .nav-bar-background--scrolled {
+.bg-mdlgray, .mdl-mini-footer {
   background-color: #424242; }
 
 .bg-alpha {
   background-color: rgba(0, 0, 0, 0) !important; }
 
-.bg-deepgreen, .mdl-mini-footer, .index .card-header {
+.bg-deepgreen, .index .card-header {
   background-color: #93c47d; }
 
 .mdl-layout__obfuscator.is-visible {

@@ -81,7 +81,7 @@ window.addEventListener("load",()=>
             if(this.header.classList.contains("nav-bar-background--scrolled"))
                 this.header.classList.remove("nav-bar-background--scrolled");
             var percent=this.top/(height*3);
-            this.header.style.backgroundColor="rgba("+66*percent+","+66*percent+","+66*percent+","+1*percent+")";
+            this.header.style.backgroundColor="rgba("+136*percent+","+176*percent+","+75*percent+","+1*percent+")";
         }
      
     }

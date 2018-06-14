@@ -8,6 +8,9 @@
 .fullscreen-width {
   width: 100vw; }
 
+.fullfather-width {
+  width: 100%; }
+
 .bg-gradient--keymeh {
   background: #8360c3;
   /* fallback for old browsers */

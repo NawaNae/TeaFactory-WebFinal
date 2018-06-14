@@ -1,4 +1,7 @@
 @import "colors";
+@import "width";
+@import "break-point";
+@import "gradient";
 $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 *{
     font-family: $normal-font-family;
@@ -36,7 +39,13 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 {
     position: fixed;
 }
-
+.mdl-layout__drawer-button
+{
+    @include breakpoint(xlpc)
+    {
+        left:calc((100vw - 1280px)/2);
+    }
+}
 .nav-bar-background--scrolled 
 {
     @extend .bg-greenery;
@@ -47,7 +56,7 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 }
 .mdl-mini-footer
 {
-    @extend .bg-mdlgray;
+    @extend .bg-alpha;
 }
 .mdl-layout-title
 {
@@ -62,6 +71,21 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 }
 .mdl-layout__drawer
 {
+    &.fixed-top
+    {
+        position: fixed;
+        top:0;
+        left: 0;
+    }
+    .submenu
+    {
+        flex-direction: column;
+        padding-left:16px;
+        .mdl-navigation__link
+        {
+            width: none;
+        }
+    }
     .mdl-layout-title
     {
         .mdl-layout-title__link
@@ -74,6 +98,7 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
         }
     }
 }
+
 #FB-btn
 {
     background-image: url('../image/icon/facebook-box.png');

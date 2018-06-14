@@ -1,0 +1,12 @@
+$maxWidthLimit:1280px;
+.max-width-limit
+{
+    max-width: $maxWidthLimit;
+    width: 100%;
+    margin:0 auto;
+    padding: 0;
+}
+.fullscreen-width
+{
+    width:100vw;
+}

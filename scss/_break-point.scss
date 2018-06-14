@@ -2,18 +2,32 @@
 @mixin breakpoint($point)
 //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
  {
-    @if $point == pc
+    @if $point == xlpc
+    {
+        @media only screen and (min-width: 1280px)
+       {
+            @content ;
+       }
+    }
+    @else if $point == xl
+    {
+        @media only screen and (min-width: 1200px)
+        {
+             @content ;
+        }
+    }
+    @else if $point == pc
     {
         @media only screen and (min-width: 840px)
        {
-            @content 
+            @content ;
        }
     }
     @else if $point == tablet 
     {
         @media only screen and (min-width: 480px)  
         {
-            @content 
+            @content ;
         }
 
     }

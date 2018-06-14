@@ -10,70 +10,90 @@
   <!-- Bootstrap CSS -->
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="index">
-  <div class=" mdl-layout mdl-js-layout  mdl-layout--fixed-header">
-    <header class=" mdl-layout__header mdl-layout__header--transparent fixed-top d-none d-md-none d-sm-none d-xs-none  d-lg-flex d-xl-flex">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title"><a class="mdl-layout-title__link" href="index.html">北科老茶廠
-          <br>TaipeiTech Tea Factory</a></span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation -->
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">最新消息</a>
-          <a class="mdl-navigation__link" href="">茶廠介紹</a>
-          <a class="mdl-navigation__link" href="">茶種介紹</a>
-          <a class="mdl-navigation__link" href="">營業時間&交通</a>
-          <a href="" class="mdl-navigation__link">餐飲&預約參訪</a>
-          <a href="" class="mdl-navigation__link">產品&線上購物</a>
-          <a href="" class="mdl-navigation__link">購物說明</a>
-          <a href="" class="mdl-navigation__link">聯絡我們</a>
-        </nav>
+<body class="index bg-gradient--neonlife">
+  <div class=" mdl-layout mdl-js-layout  mdl-layout--fixed-header ">
 
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-          <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
-            <i class="material-icons">search</i>
-          </label>
-          <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+    <header class=" mdl-layout__header mdl-layout__header--transparent fixed-top">
+      <div class="max-width-limit">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">
+            <a class="mdl-layout-title__link" href="index.html">北科老茶廠
+              <br>TaipeiTech Tea Factory</a>
+          </span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">最新消息</a>
+            <a class="mdl-navigation__link" href="">茶廠介紹</a>
+            <a class="mdl-navigation__link" href="">茶種介紹</a>
+            <a class="mdl-navigation__link" href="">營業時間&交通</a>
+            <a href="" class="mdl-navigation__link">產品&線上購物</a>
+            <a href="" class="mdl-navigation__link">聯絡我們</a>
+          </nav>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                        mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+            </div>
           </div>
         </div>
       </div>
+
     </header>
     <div class="mdl-layout__drawer fixed-top">
-      <span class="mdl-layout-title"><a class="mdl-layout-title__link" href="index.html">北科老茶廠</a></span>
+      <span class="mdl-layout-title">
+        <a class="mdl-layout-title__link" href="index.html">北科老茶廠</a>
+      </span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">最新消息</a>
-        <a class="mdl-navigation__link" href="">茶廠介紹</a>
-        <a class="mdl-navigation__link" href="">茶種介紹</a>
+        <a class="mdl-navigation__link" data-toggle="collapse" href="#newsCollapse" role="button" aria-expanded="false" aria-controls="newsCollapse"
+          href="">茶廠介紹</a>
+        <nav id="newsCollapse" class="submenu">
+          <a class="mdl-navigation__link" href="">最新消息</a>
+          <a class="mdl-navigation__link" href="">最新消息</a>
+          <a class="mdl-navigation__link" href="">最新消息</a>
+        </nav>
+        <a class="mdl-navigation__link" href="" data-toggle="collapse" href="#teasCollapse" role="button" aria-expanded="false" aria-controls="teasCollapse">茶種介紹</a>
+        <nav id="teasCollapse" class="submenu">
+          <a class="mdl-navigation__link" href="" data-toggle="collapse" href="#blackTeasCollapse" role="button" aria-expanded="false"
+            aria-controls="blackTeas">紅茶</a>
+          <nav id="blackTeasCollapse" class="submenu">
+            <a class="mdl-navigation__link" href="">最新消息</a>
+            <a class="mdl-navigation__link" href="">最新消息</a>
+            <a class="mdl-navigation__link" href="">最新消息</a>
+          </nav>
+          <a class="mdl-navigation__link" href="">綠茶</a>
+          <a class="mdl-navigation__link" href="">烏龍茶</a>
+        </nav>
         <a class="mdl-navigation__link" href="">營業時間&交通</a>
         <a href="" class="mdl-navigation__link">餐飲&預約參訪</a>
         <a href="" class="mdl-navigation__link">產品&線上購物</a>
         <a href="" class="mdl-navigation__link">購物說明</a>
         <a href="" class="mdl-navigation__link">聯絡我們</a>
       </nav>
+
+
     </div>
-    <header class=" mdl-layout__header fixed-bottom  d-lg-none d-xl-none ">
-      <div class="mdl-layout__header-row">
-        <div class="mdl-layout-spacer"></div>
-        <span class="mdl-layout-title "><a class="mdl-layout-title__link" href="index.html">北科老茶廠<br>TaipeiTech Tea Factory</a></span>
-    </header>
   </div>
-
-  <div class="header-background d-flex">
-    <h1 class="mx-auto my-auto align-middle text-light">金枝玉葉 國韻天香</h1>
-  </div>
-  <div class="mdl-grid">
-
+  
+  <div class="mdl-grid max-width-limit">
+      <div class="header-background d-flex">
+      <h1 class="mx-auto my-auto align-middle text-light">金枝玉葉 國韻天香</h1>
+    </div>
     <div class="mdl-cell mdl-cell--12-col card news border-rect">
       <div class="card-header">最新消息</div>
       <div class="mdl-grid">
@@ -146,21 +166,28 @@
       </div>
     </div>
   </div>
-  <footer class="mdl-mini-footer">
-    <div class="mdl-mini-footer__left-section">
-      <div class="mdl-logo">
-        版權所有 台灣農林股份有限公司 北科老茶廠<br>台北市大安區忠孝東路三段1號 02 2771 2171<br>Powered by BS4, MDL, firebase Design by XXXX
-      </div>
+  <div class="fullscreen-width bg-mdlgray">
+    <div class="max-width-limit">
+
+      <footer class="mdl-mini-footer">
+
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">
+            版權所有 台灣農林股份有限公司 北科老茶廠
+            <br>台北市大安區忠孝東路三段1號 02 2771 2171
+            <br>Powered by BS4, MDL, firebase Design by XXXX
+          </div>
+        </div>
+
+        <div class="mdl-mini-footer__right-section">
+          <button id="FB-btn" class="mdl-mini-footer__social-btn"></button>
+          <button id="GPlus-btn" class="mdl-mini-footer__social-btn"></button>
+          <button id="Twitter-btn" class="mdl-mini-footer__social-btn"></button>
+        </div>
+      </footer>
     </div>
 
-    <div class="mdl-mini-footer__right-section">
-      <button id="FB-btn" class="mdl-mini-footer__social-btn"></button>
-      <button id="GPlus-btn" class="mdl-mini-footer__social-btn"></button>
-      <button id="Twitter-btn" class="mdl-mini-footer__social-btn"></button>
-    </div>
-
-  </footer>
-
+  </div>
 
 
 

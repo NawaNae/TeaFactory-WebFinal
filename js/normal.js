@@ -85,27 +85,8 @@ window.addEventListener("load",()=>
         }
      
     }
-    var bottomNavCtrl=new NawaNawa.Classes.ScrollController();
-    NawaNawa.navScrollController=bottomNavCtrl;
-    bottomNavCtrl.header=document.querySelector("header.mdl-layout__header.fixed-bottom");
-    bottomNavCtrl.footer=document.querySelector(".mdl-mini-footer");
-    bottomNavCtrl.onScrollDown=function()
-    {
-       if(this.bottom>=this.footer.offsetTop)
-        {
-            if(!this.header.classList.contains("hide"))
-                this.header.classList.add("hide");
-        }
-    }
-    bottomNavCtrl.onScrollUp=function()
-    {
-        if(this.bottom<=this.footer.offsetTop)
-        {
-            if(this.header.classList.contains("hide"))
-                this.header.classList.remove("hide");
-        }
-            
-    }
 });
+
+
 
 

@@ -82,6 +82,13 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
   top: 0;
   left: 0; }
 
+.mdl-layout__drawer button.mdl-navigation__link {
+  background: none;
+  text-align: left;
+  border: none; }
+  .mdl-layout__drawer button.mdl-navigation__link:hover {
+    background-color: #e0e0e0; }
+
 .mdl-layout__drawer .submenu {
   flex-direction: column;
   padding-left: 16px; }

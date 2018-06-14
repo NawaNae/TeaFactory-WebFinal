@@ -60,24 +60,38 @@
       </span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">最新消息</a>
-        <a class="mdl-navigation__link" data-toggle="collapse" href="#newsCollapse" role="button" aria-expanded="false" aria-controls="newsCollapse"
-          href="">茶廠介紹</a>
-        <nav id="newsCollapse" class="submenu">
-          <a class="mdl-navigation__link" href="">最新消息</a>
-          <a class="mdl-navigation__link" href="">最新消息</a>
-          <a class="mdl-navigation__link" href="">最新消息</a>
+        <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#newsCollapse" aria-expanded="false" aria-controls="newsCollapse" >茶廠介紹</button>
+        <nav id="newsCollapse" class="submenu collapse">
+            <a class="mdl-navigation__link" href="">老茶廠的故事</a>
+            <a class="mdl-navigation__link" href="">新—茶廠</a>
+            <a class="mdl-navigation__link" href="">舊—茶廠</a>
+            <a class="mdl-navigation__link" href="">茶廠設備</a>
+            <a class="mdl-navigation__link" href="">製茶設備</a>            
         </nav>
-        <a class="mdl-navigation__link" href="" data-toggle="collapse" href="#teasCollapse" role="button" aria-expanded="false" aria-controls="teasCollapse">茶種介紹</a>
-        <nav id="teasCollapse" class="submenu">
-          <a class="mdl-navigation__link" href="" data-toggle="collapse" href="#blackTeasCollapse" role="button" aria-expanded="false"
-            aria-controls="blackTeas">紅茶</a>
-          <nav id="blackTeasCollapse" class="submenu">
-            <a class="mdl-navigation__link" href="">最新消息</a>
-            <a class="mdl-navigation__link" href="">最新消息</a>
-            <a class="mdl-navigation__link" href="">最新消息</a>
+        <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#teasCollapse" aria-expanded="false" aria-controls="teasCollapse">茶種介紹</button>
+        <nav id="teasCollapse" class="submenu  collapse">
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#blackTeasCollapse" aria-expanded="false" aria-controls="blackTeasCollapse">紅茶</button>
+          <nav id="blackTeasCollapse" class="submenu  collapse">
+            <a class="mdl-navigation__link" href="">錫蘭紅茶</a>
+            <a class="mdl-navigation__link" href="">阿薩姆紅茶</a>
+            <a class="mdl-navigation__link" href="">台灣紅茶</a>
+            <a class="mdl-navigation__link" href="">大吉嶺紅茶</a>
           </nav>
-          <a class="mdl-navigation__link" href="">綠茶</a>
-          <a class="mdl-navigation__link" href="">烏龍茶</a>
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#greenTeasCollapse" aria-expanded="false" aria-controls="greenTeasCollapse">綠茶</button>
+          <nav id="greenTeasCollapse" class="submenu  collapse">
+              <a class="mdl-navigation__link" href="">台灣碧螺春綠茶</a>
+              <a class="mdl-navigation__link" href="">台灣龍井茶</a>
+              <a class="mdl-navigation__link" href="">桂平西山茶</a>
+              <a class="mdl-navigation__link" href="">午子仙毫茶</a>
+          </nav>
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#wulongTeasCollapse" aria-expanded="false" aria-controls="wulongTeasCollapse">綠茶</button>
+          <nav id="wulongTeasCollapse" class="submenu  collapse">
+              <a class="mdl-navigation__link" href="">大紅袍</a>
+              <a class="mdl-navigation__link" href="">鐵觀音</a>
+              <a class="mdl-navigation__link" href="">凍頂烏龍茶</a>
+              <a class="mdl-navigation__link" href="">東方美人茶</a>
+
+          </nav>
         </nav>
         <a class="mdl-navigation__link" href="">營業時間&交通</a>
         <a href="" class="mdl-navigation__link">餐飲&預約參訪</a>

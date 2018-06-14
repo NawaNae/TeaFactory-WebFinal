@@ -1,4 +1,7 @@
 //		  mixin變數
+$breakpoints:(phone,tablet,xs,sm,md,lg,pc,xl,xlpc);
+$breakpointsMapMax:(phone:480px,tablet:840px,pc:1200px);
+$breakpointsMapMin:(tablet:480px,pc:840px,xl:1200px);
 @mixin breakpoint($point)
 //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
  {
@@ -16,12 +19,40 @@
              @content ;
         }
     }
+    @else if $point == lg
+    {
+        @media only screen and (max-width: 1200px)   
+        {
+            @content ;
+        }
+    }
     @else if $point == pc
     {
         @media only screen and (min-width: 840px)
        {
             @content ;
        }
+    }
+    @else if $point == md
+    {
+        @media only screen and (max-width: 992px)   
+        {
+            @content ;
+        }
+    }
+    @else if $point == sm
+    {
+        @media only screen and (min-width: 576px)   
+        {
+            @content ;
+        }
+    }
+    @else if $point == xs
+    {
+        @media only screen and (max-width: 576px)   
+        {
+            @content ;
+        }
     }
     @else if $point == tablet 
     {
@@ -33,9 +64,71 @@
     }
     @else if $point == phone
     {
-        @media only screen and (max-width: 497px)   
+        @media only screen and (max-width: 480px)   
         {
-            @content 
+            @content ;
+        }
+    }
+ };
+@mixin breakpointMax($point)
+{
+  
+    @if $point == xl
+    {
+        @media only screen and (max-width: 1280px)
+        {
+             @content ;
+        }
+    }
+    @else if $point == pc
+    {
+        @media only screen and (max-width: 1200px)
+       {
+            @content ;
+       }
+    }
+    @else if $point == lg
+    {
+        @media only screen and (max-width: 1200px)   
+        {
+            @content ;
+        }
+    }
+    @else if $point == tablet 
+    {
+        @media only screen and (max-width: 840px)  
+        {
+            @content ;
+        }
+
+    }
+
+    @else if $point == md
+    {
+        @media only screen and (max-width: 992px)   
+        {
+            @content ;
+        }
+    }  
+    @else if $point == sm
+    {
+        @media only screen and (max-width:768px)   
+        {
+            @content ;
+        }
+    }
+    @else if $point == xs
+    {
+        @media only screen and (max-width: 576px)   
+        {
+            @content ;
+        }
+    }
+    @else if $point == phone
+    {
+        @media only screen and (max-width: 480px)   
+        {
+            @content ;
         }
     }
  }

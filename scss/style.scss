@@ -68,6 +68,10 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
         {
             margin-left: 0px;
             margin-right: 0px;
+            @include  breakpointMin(xl)
+            {
+                display: none !important;
+            }
         }
 
         .mdl-layout__header-row
@@ -77,12 +81,20 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
             .mdl-layout-title
             {
                 margin-left: 24px;
+                @include  breakpointMin(xl)
+                {
+                    margin-left: 0px;
+                }
             }
             .mdl-textfield
             {
                 margin-left: 16px;
                 padding-bottom:17px;
             }
+            @include breakpointMin(xl)
+            {
+                padding-left: 8px;
+            };
         }
     }
 }

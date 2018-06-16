@@ -14,3 +14,16 @@ $dispMap:(show:flex,hide:none);
         };
     };
 };
+@each $disp in $display
+{
+    @each $point in $breakpoints 
+    {
+        .#{$disp}-min-#{$point} 
+        {
+            @include breakpointMin($point)
+            {
+                display: map-get($dispMap , $disp ) !important;
+            };
+        };
+    };
+};

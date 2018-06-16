@@ -81,15 +81,24 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .mdl-layout__header.fixed-top .mdl-layout__drawer-button {
   margin-left: 0px;
   margin-right: 0px; }
+  @media only screen and (min-width: 1200px) {
+    .mdl-layout__header.fixed-top .mdl-layout__drawer-button {
+      display: none !important; } }
 
 .mdl-layout__header.fixed-top .mdl-layout__header-row {
   padding-right: 8px;
   padding-left: 56px; }
   .mdl-layout__header.fixed-top .mdl-layout__header-row .mdl-layout-title {
     margin-left: 24px; }
+    @media only screen and (min-width: 1200px) {
+      .mdl-layout__header.fixed-top .mdl-layout__header-row .mdl-layout-title {
+        margin-left: 0px; } }
   .mdl-layout__header.fixed-top .mdl-layout__header-row .mdl-textfield {
     margin-left: 16px;
     padding-bottom: 17px; }
+  @media only screen and (min-width: 1200px) {
+    .mdl-layout__header.fixed-top .mdl-layout__header-row {
+      padding-left: 8px; } }
 
 .mdl-layout-title .mdl-layout-title__link {
   color: white;
@@ -199,6 +208,62 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 
 @media only screen and (max-width: 1280px) {
   .hide-max-xl {
+    display: none !important; } }
+
+@media only screen and (min-width: 480px) {
+  .show-min-tablet {
+    display: flex !important; } }
+
+@media only screen and (min-width: 576px) {
+  .show-min-sm {
+    display: flex !important; } }
+
+@media only screen and (min-width: 768px) {
+  .show-min-md {
+    display: flex !important; } }
+
+@media only screen and (min-width: 992px) {
+  .show-min-lg {
+    display: flex !important; } }
+
+@media only screen and (min-width: 840px) {
+  .show-min-pc {
+    display: flex !important; } }
+
+@media only screen and (min-width: 1200px) {
+  .show-min-xl {
+    display: flex !important; } }
+
+@media only screen and (min-width: 1280px) {
+  .show-min-xlpc {
+    display: flex !important; } }
+
+@media only screen and (min-width: 480px) {
+  .hide-min-tablet {
+    display: none !important; } }
+
+@media only screen and (min-width: 576px) {
+  .hide-min-sm {
+    display: none !important; } }
+
+@media only screen and (min-width: 768px) {
+  .hide-min-md {
+    display: none !important; } }
+
+@media only screen and (min-width: 992px) {
+  .hide-min-lg {
+    display: none !important; } }
+
+@media only screen and (min-width: 840px) {
+  .hide-min-pc {
+    display: none !important; } }
+
+@media only screen and (min-width: 1200px) {
+  .hide-min-xl {
+    display: none !important; } }
+
+@media only screen and (min-width: 1280px) {
+  .hide-min-xlpc {
     display: none !important; } }
 
 * {

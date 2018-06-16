@@ -11,6 +11,18 @@
 .fullfather-width {
   width: 100%; }
 
+.bg-greenery, .nav-bar-background--scrolled, .mdl-layout__header.fixed-bottom {
+  background-color: #88b04b; }
+
+.bg-mdlgray {
+  background-color: #424242; }
+
+.bg-alpha, .mdl-mini-footer {
+  background-color: rgba(0, 0, 0, 0) !important; }
+
+.bg-deepgreen {
+  background-color: #93c47d; }
+
 .bg-gradient--keymeh {
   background: #8360c3;
   /* fallback for old browsers */
@@ -55,18 +67,6 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .border-none {
   border-style: none !important; }
 
-.bg-greenery, .nav-bar-background--scrolled, .mdl-layout__header.fixed-bottom {
-  background-color: #88b04b; }
-
-.bg-mdlgray {
-  background-color: #424242; }
-
-.bg-alpha, .mdl-mini-footer {
-  background-color: rgba(0, 0, 0, 0) !important; }
-
-.bg-deepgreen {
-  background-color: #93c47d; }
-
 .mdl-layout__obfuscator.is-visible {
   position: fixed; }
 
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
   padding-right: 8px; }
 
 .mdl-layout__header.fixed-top .mdl-layout__drawer-button {
-  margin-left: 0px;
+  margin-left: 8px;
   margin-right: 0px; }
   @media only screen and (min-width: 1200px) {
     .mdl-layout__header.fixed-top .mdl-layout__drawer-button {

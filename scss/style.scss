@@ -57,18 +57,48 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 .mdl-mini-footer
 {
     @extend .bg-alpha;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.mdl-layout__header
+{
+    &.fixed-top
+    {
+        .mdl-layout__drawer-button
+        {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .mdl-layout__header-row
+        {
+            padding-right: 8px;
+            padding-left: 56px;
+            .mdl-layout-title
+            {
+                margin-left: 24px;
+            }
+            .mdl-textfield
+            {
+                margin-left: 16px;
+                padding-bottom:17px;
+            }
+        }
+    }
 }
 .mdl-layout-title
 {
     .mdl-layout-title__link
     {
         color:white;
+        line-height:1.3;
         &:hover
         {
 
         }
     }
 }
+
 .mdl-layout__drawer
 {
     &.fixed-top
@@ -76,6 +106,7 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
         position: fixed;
         top:0;
         left: 0;
+    
     }
     
         button

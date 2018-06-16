@@ -1,7 +1,7 @@
 @import "break-point";
 @import "colors";
 @import "background";
-@import "display";
+
 $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 *{
     font-family: $normal-font-family;
@@ -22,6 +22,20 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 .news
 {
     background-color: $background-green;
+    .card
+    {
+    
+        .card-body
+        {
+            height: 200px;
+            overflow: hidden;
+        }
+        @include breakpointMax(md)
+        {
+            height: auto;
+        }
+    
+    }
     @include breakpoint(pc)
     {
         .card

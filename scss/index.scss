@@ -29,11 +29,12 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
         {
             height: 200px;
             overflow: hidden;
+            @include breakpointMax(sm)
+            {
+                height: auto;
+            }
         }
-        @include breakpointMax(md)
-        {
-            height: auto;
-        }
+        
     
     }
     @include breakpoint(pc)

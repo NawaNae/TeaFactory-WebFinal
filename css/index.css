@@ -24,9 +24,9 @@
   .news .card .card-body {
     height: 200px;
     overflow: hidden; }
-  @media only screen and (max-width: 992px) {
-    .news .card {
-      height: auto; } }
+    @media only screen and (max-width: 768px) {
+      .news .card .card-body {
+        height: auto; } }
   @media only screen and (min-width: 840px) {
     .news .card {
       height: 200px; }

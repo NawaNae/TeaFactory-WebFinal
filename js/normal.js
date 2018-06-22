@@ -58,7 +58,9 @@ window.addEventListener("load",()=>
         if(this.top<=height*3)
         {
             var percent=this.top/(height*3);
-            this.header.style.backgroundColor="rgba("+136*percent+","+176*percent+","+75*percent+","+1*percent+")";
+            var origin={r:62, g:80, b:34, a:0.455};
+            var diff={r:136-origin.r,g:172-origin.g,b:75-origin.b,a:1-origin.a};
+            this.header.style.backgroundColor="rgba("+(diff.r*percent+origin.r)+","+(diff.g*percent+origin.g)+","+(diff.b*percent+origin.b)+","+(diff.a*percent+origin.a)+")";
         }
         else
         {
@@ -81,7 +83,9 @@ window.addEventListener("load",()=>
             if(this.header.classList.contains("nav-bar-background--scrolled"))
                 this.header.classList.remove("nav-bar-background--scrolled");
             var percent=this.top/(height*3);
-            this.header.style.backgroundColor="rgba("+136*percent+","+176*percent+","+75*percent+","+1*percent+")";
+            var origin={r:62, g:80, b:34, a:0.455};
+            var diff={r:136-origin.r,g:172-origin.g,b:75-origin.b,a:1-origin.a};
+            this.header.style.backgroundColor="rgba("+(diff.r*percent+origin.r)+","+(diff.g*percent+origin.g)+","+(diff.b*percent+origin.b)+","+(diff.a*percent+origin.a)+")";
         }
      
     }

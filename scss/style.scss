@@ -127,15 +127,16 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 }
 button
 {
-&.mdl-navigation__link
+    &.mdl-navigation__link
     {
-    background: none;
-    text-align: left;
-    border: none;
-    &:hover
-    {
-        background-color: $mdldrawerhoverbg;
-    }
+        background: none;
+        text-align: left;
+        border: none;
+        &:hover
+        {
+            background-color: $mdldrawerhoverbg;
+        }
+    }    
 }
 .mdl-layout__drawer
 {
@@ -148,7 +149,7 @@ button
     }
     
      
-    }
+
     .submenu
     {
         flex-direction: column;

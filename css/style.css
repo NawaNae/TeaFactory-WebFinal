@@ -241,18 +241,18 @@ button.mdl-navigation__link {
   button.mdl-navigation__link:hover {
     background-color: #e0e0e0; }
 
-button .mdl-layout__drawer.fixed-top {
+.mdl-layout__drawer.fixed-top {
   position: fixed;
   top: 0;
   left: 0; }
 
-button .submenu {
+.mdl-layout__drawer .submenu {
   flex-direction: column;
   padding-left: 16px; }
-  button .submenu .mdl-navigation__link {
+  .mdl-layout__drawer .submenu .mdl-navigation__link {
     width: none; }
 
-button .mdl-layout-title .mdl-layout-title__link {
+.mdl-layout__drawer .mdl-layout-title .mdl-layout-title__link {
   color: #424242; }
 
 #FB-btn {

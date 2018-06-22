@@ -4,6 +4,10 @@
 @import "background";
 @import "gradient";
 @import "display";
+a:hover{
+    text-decoration:none;
+    cursor: default;//pointer;
+}
 $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
 *{
     font-family: $normal-font-family;
@@ -55,6 +59,23 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
         {
             background-color: $greentopmost;
         }
+        &.mdl-layout__header
+        {
+            .mdl-layout-title
+            {
+                &:hover
+                {
+                    
+                }
+            }
+            .mdl-navigation__link
+            {
+                &:hover
+                {
+                    background-color:$headerlinkhover;
+                }
+            }
+        }
         .mdl-layout__drawer-button
         {
             margin-left: 8px;
@@ -95,10 +116,6 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
     {
         color:white;
         line-height:1.3;
-        &:hover
-        {
-
-        }
     }
 }
 

@@ -6,6 +6,9 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <script src="js/normal.js"></script>
   <!-- Bootstrap CSS -->
 
@@ -39,7 +42,7 @@
             <a class="mdl-navigation__link hide-max-pc" href="businessHoursAndTraffic.html">營業時間&交通</a>
             <a href="productAndOnlineShopping.html" class="mdl-navigation__link  hide-max-xs">產品&線上購物</a>
             <a href="contact.html" class="mdl-navigation__link hide-max-pc">聯絡我們</a>
-            <a class="mdl-navigation__link"><i class="material-icons">account_circle</i></a>
+            <button class="mdl-navigation__link "  data-toggle="modal" data-target="#login-dialog"><i class="material-icons">account_circle</i></button>
           </nav>
 
           <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
@@ -104,7 +107,23 @@
 
     </div>
   </div>
-  
+  <div class="modal fade" id="login-dialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="firebaseui-auth-container">
+          
+     
+        </div>
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
   <div class="header-background d-flex">
     <h1 class="mx-auto my-auto align-middle text-light">金枝玉葉 國韻天香</h1>
   </div>

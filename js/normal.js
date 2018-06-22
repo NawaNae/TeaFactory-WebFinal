@@ -1,5 +1,26 @@
 var NawaNawa=NawaNawa||{};
-
+var config = {
+    apiKey: "AIzaSyCWldsTXM-HqUORn222Ys9cFz-0kvgcj1U",
+    authDomain: "teaweb-8fb7b.firebaseapp.com",
+    databaseURL: "https://teaweb-8fb7b.firebaseio.com",
+    projectId: "teaweb-8fb7b",
+    storageBucket: "teaweb-8fb7b.appspot.com",
+    messagingSenderId: "384896334158"
+  };
+  firebase.initializeApp(config);
+  var uiConfig = {
+    signInSuccessUrl: '<url-to-redirect-to-on-success>',
+    signInOptions: [
+      // Leave the lines as is for the providers you want to offer your users.
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    ],
+    // Terms of service url.
+    tosUrl: '<your-tos-url>'
+  };
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
 NawaNawa.Classes=NawaNawa.Classes||{};
 NawaNawa.Classes.ScrollController=
 class ScrollController
@@ -47,6 +68,7 @@ class ScrollController
 }
 window.addEventListener("load",()=>
 {
+  
     var topNavCtrl=new NawaNawa.Classes.ScrollController();
     NawaNawa.navScrollController=topNavCtrl;
     topNavCtrl.header=document.querySelector("header.mdl-layout__header.fixed-top");
@@ -89,6 +111,7 @@ window.addEventListener("load",()=>
         }
      
     }
+
 });
 
 

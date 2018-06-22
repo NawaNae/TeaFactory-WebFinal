@@ -30,12 +30,18 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
         }
     }
 }
+.card
+{
+    .card-header
+    {
+        color:white;
+    }
+}
 .news
 {
     background-color: $background-green;
     .card
     {
-    
         .card-body
         {
             height: 200px;

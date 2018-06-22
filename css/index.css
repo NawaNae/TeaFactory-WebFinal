@@ -25,6 +25,9 @@
     .index .header-background h1 {
       font-size: 35px; } }
 
+.card .card-header {
+  color: white; }
+
 .news {
   background-color: rgba(182, 215, 168, 0.5); }
   .news .card .card-body {

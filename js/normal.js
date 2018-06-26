@@ -138,7 +138,7 @@ import {firebaseConfig} from './firebaseconfig.js';
             //console.log(providerData);
             $('.accountProvider').text("登入方式\t"+providerData[0].providerId);
             document.getElementById('account-button').dataset.target="#account-dialog";
-
+            document.body.dataset.userLevelKey=NawaNawa.userLevelKey(uid);
           });
         } else {
           // User is signed out.
@@ -148,10 +148,10 @@ import {firebaseConfig} from './firebaseconfig.js';
           $('.accountPhone').text("");
           $('.accountProvider').text("");
           $('#account-dialog').modal('hide');
+          document.body.dataset.userLevelKey=undefined;
           document.getElementById('account-button').dataset.target="#login-dialog";
-        //   document.getElementById('sign-in-status').textContent = 'Signed out';
-        //   document.getElementById('sign-in').textContent = 'Sign in';
-          document.getElementById('account-details').textContent = '';
+          //   document.getElementById('sign-in-status').textContent = 'Signed out';
+          //   document.getElementById('sign-in').textContent = 'Sign in';
         }
       }
       let onerror= function(error) {
@@ -214,6 +214,8 @@ window.addEventListener("load",()=>
        var father=this.parentNode;
        var name=father.querySelector("#account-name").value;
        var password = father.querySelector("#password").value;
+       father.querySelector("#account-name").value="";
+       father.querySelector("#password").value="";
        var user = firebase.auth().currentUser;
         var newProfile={};
         if(name)newProfile.displayName=name;

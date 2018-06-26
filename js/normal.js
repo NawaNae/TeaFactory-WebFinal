@@ -1,4 +1,3 @@
-console.log("normal");
 var NawaNawa=NawaNawa||{};
 NawaNawa.Classes=NawaNawa.Classes||{};
 NawaNawa.Classes.firebaseChildsHandler=
@@ -91,6 +90,29 @@ class ScrollController
     set bottom(val)
     {this.top=val-window.innerHeight;}
 }
+NawaNawa.userLevelKey=function(uid)
+{
+    var levelUidTable={
+        管理員:['syF5GwOXBcPPhfS6CJ66lbQuOea2']
+    };
+
+    var levelKey;
+    for (var key in levelUidTable)
+        if(levelUidTable[key].find(ele=>ele===uid))
+            return key;
+    return 'normal';
+        
+}
+NawaNawa.userLevel = function(uid)
+{
+    var levelKeyValue=
+    {
+        管理員:4,
+        用戶:1,
+        訪客:0
+    };
+    return levelKeyValue[NawaNawa.userLevelKey(uid)];
+}
 import {firebaseConfig} from './firebaseconfig.js';
   firebase.initializeApp(firebaseConfig);
   let initApp = function() {
@@ -98,6 +120,7 @@ import {firebaseConfig} from './firebaseconfig.js';
     {
         if (user) {
           // User is signed in.
+          
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
@@ -105,29 +128,30 @@ import {firebaseConfig} from './firebaseconfig.js';
           var uid = user.uid;
           var phoneNumber = user.phoneNumber;
           var providerData = user.providerData;
+          
           user. getIdToken().then(function(accessToken) {
-              $('#login-dialog').modal('hide');
-            document.getElementById('sign-in-status').textContent = 'Signed in';
-              document.getElementById('account-button').dataset.target="#account-dialog";
-              document.getElementById('accountModalLongTitle').innerText="歡迎 "+displayName;
-            // document.getElementById('account-details').textContent = JSON.stringify({
-            //   displayName: displayName,
-            //   email: email,
-            //   emailVerified: emailVerified,
-            //   phoneNumber: phoneNumber,
-            //   photoURL: photoURL,
-            //   uid: uid,
-            //   accessToken: accessToken,
-            //   providerData: providerData
-            // }, null, '  ');
+            $('#login-dialog').modal('hide');
+            $('.accountName').text(displayName);
+            $('.accountLevel').text(NawaNawa.userLevelKey(uid));
+            $('.accountEmail').text("email\t"+email + " " + (emailVerified?"驗證":"未驗證"));
+            $('.accountPhone').text("電話\t"+phoneNumber);
+            //console.log(providerData);
+            $('.accountProvider').text("登入方式\t"+providerData[0].providerId);
+            document.getElementById('account-button').dataset.target="#account-dialog";
+
           });
         } else {
           // User is signed out.
+          $('.accountName').text("訪客");
+          $('.accountLevel').text("");
+          $('.accountEmail').text("");
+          $('.accountPhone').text("");
+          $('.accountProvider').text("");
           $('#account-dialog').modal('hide');
           document.getElementById('account-button').dataset.target="#login-dialog";
         //   document.getElementById('sign-in-status').textContent = 'Signed out';
         //   document.getElementById('sign-in').textContent = 'Sign in';
-          document.getElementById('account-details').textContent = 'null';
+          document.getElementById('account-details').textContent = '';
         }
       }
       let onerror= function(error) {
@@ -185,6 +209,22 @@ window.addEventListener("load",()=>
      
     }
     initApp();
+    $("#saveProfileChange").on('click',function()
+    {
+       var father=this.parentNode;
+       var name=father.querySelector("#account-name").value;
+       var password = father.querySelector("#password").value;
+       var user = firebase.auth().currentUser;
+        var newProfile={};
+        if(name)newProfile.displayName=name;
+        if(password)user.updatePassword(password);
+        user.updateProfile(newProfile).then(
+        function() {
+            $('#accountName').text(name);
+        }).catch(function(error) {
+            console.log(error.message);
+        });
+    })
 });
 
 

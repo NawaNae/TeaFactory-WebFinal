@@ -117,6 +117,24 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
         }
     }
 }
+#account-dialog
+{
+
+        .mdl-tabs__panel
+        {
+            min-height: 250px;
+            @include breakpointMin(lg)
+            {
+                min-width: 900px;
+            }
+            @include breakpointMin(sm)
+            {
+                min-width: 500px;
+            }
+        }
+    
+   
+}
 .mdl-layout-title
 {
     .mdl-layout-title__link
@@ -147,8 +165,8 @@ button
         left: 0;
     
     }
+
     
-     
 
     .submenu
     {

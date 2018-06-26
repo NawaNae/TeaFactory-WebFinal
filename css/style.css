@@ -230,6 +230,15 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
     .mdl-layout__header.fixed-top .mdl-layout__header-row {
       padding-left: 8px; } }
 
+#account-dialog .mdl-tabs__panel {
+  min-height: 250px; }
+  @media only screen and (min-width: 992px) {
+    #account-dialog .mdl-tabs__panel {
+      min-width: 900px; } }
+  @media only screen and (min-width: 576px) {
+    #account-dialog .mdl-tabs__panel {
+      min-width: 500px; } }
+
 .mdl-layout-title .mdl-layout-title__link {
   color: white;
   line-height: 1.3; }

@@ -20,6 +20,13 @@ h1,h2,h3,h4,h5,h6,.mdl-layout-title
 {
     @extend .bg-deepgreen;
 }
+.card
+{
+    .card-header
+    {
+        color:white;
+    }
+}
 .border-rect
 {
     border-radius: 0 !important;

@@ -239,7 +239,12 @@ import {firebaseConfig} from './firebaseconfig.js';
       }
     firebase.auth().onAuthStateChanged(checkAuth,onerror);
   };
-
+NawaNawa.removeNews=function (newsId)
+{
+    firebase.database().ref("news/"+newsId).remove().then(function(){
+        alert("移除成功");
+    })
+}
 export {NawaNawa} ;
 
 

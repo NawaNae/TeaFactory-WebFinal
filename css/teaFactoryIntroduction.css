@@ -17,8 +17,6 @@
 .top-56-bar {
   width: 100%;
   height: 56px; }
-* {
-  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
 .word {
   font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
 .flex-colum {
@@ -47,48 +45,8 @@
   @media only screen and (max-width: 576px) {
     .index .header-background h1 {
       font-size: 35px; } }
-
+.flex-col-item:hover{
+    background-color: #88b04b;
+}
 .card .card-header {
   color: white; }
-
-.news {
-  background-color: rgba(182, 215, 168, 0.5); }
-  .news .card .card-body {
-    height: 200px;
-    overflow: hidden; }
-    @media only screen and (max-width: 768px) {
-      .news .card .card-body {
-        height: auto; } }
-  @media only screen and (min-width: 840px) {
-    .news .card {
-      height: 200px; }
-      .news .card img {
-        width: 200px;
-        height: 200px; } }
-  @media only screen and (min-width: 480px) {
-    .news .card {
-      min-height: 200px;
-      text-align: center; }
-      .news .card img {
-        width: 200px;
-        height: 200px; } }
-  @media only screen and (max-width: 480px) {
-    .news .card {
-      min-height: 200px;
-      text-align: center; }
-      .news .card img {
-        width: 100%; } }
-
-.medals {
-  background-color: rgba(182, 215, 168, 0.5); }
-  .medals .mdl-grid {
-    width: 100%; }
-  .medals .card img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%; }
-    @media only screen and (min-width: 840px) {
-      .medals .card img {
-        max-width: 400px;
-        max-height: 550px;
-        width: 100%; } }

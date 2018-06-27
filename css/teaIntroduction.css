@@ -1,15 +1,5 @@
 @charset "UTF-8";
-.bg-greenery {
-  background-color: #88b04b; }
 
-.bg-mdlgray {
-  background-color: #424242; }
-
-.bg-alpha {
-  background-color: rgba(0, 0, 0, 0) !important; }
-
-.bg-deepgreen, .index .card-header {
-  background-color: #93c47d; }
 
 .top-56-bar {
   width: 100%;

@@ -139,23 +139,23 @@
               <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account">
                   <div class="mdl-grid text-left">
                   
-                      <div class=" mdl-cell--12-col mb-4">
+                      <div class=" mdl-cell--12-col mb-3">
                         <div class="text-secondary">帳戶名稱</div>
                         <div class="accountName"></div>
                       </div>
-                      <div class=" mdl-cell--12-col mb-4">
+                      <div class=" mdl-cell--12-col mb-3">
                           <div class="text-secondary">帳戶階級</div>
                           <div class="accountLevel"></div>
                       </div>
-                      <div class=" mdl-cell--12-col mb-4">
+                      <div class=" mdl-cell--12-col mb-3">
                           <div class="text-secondary">Email</div>
                           <div class="accountEmail"></div>
                       </div>
-                      <div class=" mdl-cell--12-col mb-4">
+                      <div class=" mdl-cell--12-col mb-3">
                           <div class="text-secondary">電話</div>
                           <div class="accountPhone"></div>
                       </div>
-                      <div class=" mdl-cell--12-col mb-4">
+                      <div class=" mdl-cell--12-col mb-3">
                           <div class="text-secondary">登入方式</div>
                           <div class="accountProvider"></div>
                       </div>
@@ -203,15 +203,14 @@
     </div>
   </div>
   <div class="top-64-bar"></div>
-  <div class="top-64-bar"></div>
-  <div class="mdl-grid max-width-limit">
+  <div class="top-64-bar"></div>  <div class="mdl-grid max-width-limit">
     <div class="card flex-md-row">
       <figure class="imghvr-fade">
         <img src="image/home/news_1.jpg" alt="">
         <figcaption style="background-color: #baa619">
           <h1>主要圖片設定</h1>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  ">
-            <input class="mdl-textfield__input" type="text" id="article-image-src">
+            <input class="mdl-textfield__input" type="text" id="article-image-src" onchange="var img=this.parentNode.parentNode.parentNode.querySelector('img');img.src=this.value||img.src;">
             <label class="mdl-textfield__label" for="article-image-src" style="color:white">連結</label>
           </div>
         </figcaption>

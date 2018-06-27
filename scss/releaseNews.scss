@@ -1,8 +1,25 @@
+@import "break-point";
 figure
 {
-    width: 50%;
     img{
-        width: 100%;
-        height: 100%;
+        width:100%;
+        height: 100%;;
     }
+    @include breakpointMin(md)
+    {
+
+            width: auto;
+            height: 100%;
+            max-width: 55vw;
+
+    }
+    @include breakpointMax(md)
+    {
+
+            width: 100%;
+            height: auto;
+
+        
+    }
+
 }

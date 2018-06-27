@@ -6,7 +6,7 @@ body[data-user-level-key="管理員"]
         {
             .buttons
             {
-                .delete-button
+                .delete-button,.edit-button
                 {
                     display: block;
                 }
@@ -21,7 +21,7 @@ body[data-user-level-key="管理員"]
     {
         .buttons
         {
-            .delete-button
+            .delete-button,.edit-button
             {
                 display: none;
             }

@@ -4,15 +4,21 @@ function getVariable()
 {
     var HashStr = document.location.hash.substring(1, document.location.hash.length);
     HashStr=HashStr.substring(1, document.location.hash.length);
-
+    return HashStr;
 }
 function hashChangeHandler(e)
 {
 
     if(location.hash)
     {
-        NawaNawa.getVariable();
-        //e.preventDefault();
+        var id=NawaNawa.getVariable();
+        var news = firebase.database().ref("/news/"+id);
+        news.on('value',()=>{
+
+        });
+        $("#news-detail").modal('show');
+        $("#news-detail .news-content").html('<div class="mdl-spinner mdl-js-spinner is-active"></div>');
+
     }
     else{}
 }

@@ -84,7 +84,6 @@ class firebaseDynamicChildsHandler
         containerObj.title= title;
         containerObj.content=content;
         containerObj.buttons=buttons;
-    
         var deleteBtn = document.createElement("button");
         deleteBtn.innerText="刪除";
         deleteBtn.className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect delete-button";
@@ -98,6 +97,29 @@ class firebaseDynamicChildsHandler
         });
         componentHandler.upgradeElement(deleteBtn);
         buttons.appendChild(deleteBtn);
+        var editBtn =  document.createElement("button");
+        editBtn.innerText="編輯";
+        editBtn.className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect edit-button";
+        editBtn.addEventListener("click",()=>{
+            if(container.dataset.dbkey)
+            {
+                location.href="editNews.html#"+container.dataset.dbkey;
+            }    
+            
+        });
+        componentHandler.upgradeElement(editBtn);
+        buttons.appendChild(editBtn);
+        var viewBtn = document.createElement("button");
+        viewBtn.innerText="閱讀";
+        viewBtn.className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect read-button";
+        viewBtn.addEventListener("click",()=>{
+            if(container.dataset.dbkey)
+                location.href="news.html#"+container.dataset.dbkey;
+        });
+        componentHandler.upgradeElement(viewBtn);
+        buttons.appendChild(viewBtn);
+    
+    
         if(this.father)
             this.father.appendChild(container);
         return containerObj;

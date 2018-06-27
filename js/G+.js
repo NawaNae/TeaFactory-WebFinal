@@ -1,3 +1,5 @@
+var Load=Load||{};
+Load.js=Load.js||{};
 function commentBox(appendQueryString, width) {
     var commentBox = document.createElement('div');
     commentBox.className = 'g-comments';
@@ -8,4 +10,20 @@ function commentBox(appendQueryString, width) {
     var cont = document.querySelector(appendQueryString);
     cont.appendChild(commentBox);
     Load.js.reload('https://apis.google.com/js/plusone.js');
+}
+export {commentBox};
+Load.js.load = function (url, location)
+{
+    location = location || document.head;
+    var scriptTag = document.createElement('script');
+    scriptTag.type = 'text/javascript';
+    scriptTag.src = url;
+    location.appendChild(scriptTag);
+};
+Load.js.reload=function reloadJS(url)
+{
+    var oldJS = document.querySelector("script[src='" + url + "']");
+    if (oldJS != null)
+        oldJS.remove();
+    Load.js.load(url);
 }

@@ -41,7 +41,9 @@
   @media only screen and (max-width: 576px) {
     .index .header-background h1 {
       font-size: 35px; } }
-
+.flex-col-item:hover{
+    background-color: #88b04b;
+}
 .card .card-header {
   color: white; }
 

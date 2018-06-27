@@ -44,5 +44,8 @@
 
 .card .card-header {
   color: white; }
+  .flex-col-item:hover{
+    background-color: #88b04b;
+}
 
 

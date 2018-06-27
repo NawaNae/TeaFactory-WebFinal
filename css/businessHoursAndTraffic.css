@@ -27,7 +27,10 @@
   @media only screen and (max-width: 576px) {
     .index .header-background h1 {
       font-size: 35px; } }
-
+.navBar{
+  color: white;}
+.navBar:hover{
+  color: #bff56e;}
 .card .card-header {
   color: white; }
 

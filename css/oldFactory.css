@@ -7,6 +7,9 @@
 .flex-colum {
   display: flex;
   flex-direction: column;}
+.flex-row {
+    display: flex;
+    flex-direction: row;}
 .flex-col-title {
   text-align: center;
   justify-content: center;
@@ -22,7 +25,6 @@
   display: flex;
   flex-direction: row;
   justify-content: left;}
-
 .home-img{
   justify-content: left;
   padding-right: 15px;}
@@ -32,8 +34,9 @@
     .index .header-background h1 {
       font-size: 35px; } }
 .flex-col-item:hover{
-    background-color: #88b04b;}
-.card .card-header{
+    background-color: #88b04b;
+}
+.card .card-header {
   color: white; }
 .navBar{
   color: white;}

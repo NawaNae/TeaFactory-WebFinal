@@ -1,0 +1,318 @@
+<!doctype html>
+<html itemscope="" itemtype="http://schema.org/Website" lang="en">
+
+<head>
+  <title>北科老茶廠</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <!-- <script src="js/normal.js" type=module></script> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="js/index.js" type="module"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/blackTea.css">
+</head>
+
+<body class="index ">
+  <div class=" mdl-layout mdl-js-layout  mdl-layout--fixed-header ">
+    <header class=" mdl-layout__header  fixed-top bg-greenery fullfather-width">
+      <div class="max-width-limit">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">
+            <a class="mdl-layout-title__link" href="index.html">北科老茶廠
+              <br>TaipeiTech Tea Factory</a>
+          </span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link hide-max-sm" href="news.html">最新消息</a>
+            <a class="mdl-navigation__link hide-max-pc" href="teaFactoryIntroduction.html">茶廠介紹</a>
+            <a class="mdl-navigation__link hide-max-xs" href="teaIntroduction.html">茶種介紹</a>
+            <a class="mdl-navigation__link hide-max-pc" href="businessHoursAndTraffic.html">營業時間&交通</a>
+            <a href="productAndOnlineShopping.html" class="mdl-navigation__link  hide-max-xs">產品&線上購物</a>
+            <a href="contact.html" class="mdl-navigation__link hide-max-pc">聯絡我們</a>
+            <button class="mdl-navigation__link " data-toggle="modal" id="account-button" data-target="#login-dialog">
+              <i class="material-icons">account_circle</i>
+            </button>
+          </nav>
+          <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                        mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer fixed-top">
+      <span class="mdl-layout-title">
+        <a class="mdl-layout-title__link" href="index.html">北科老茶廠</a>
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="news.html">最新消息</a>
+        <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#newsCollapse" aria-expanded="false"
+          aria-controls="newsCollapse">茶廠介紹</button>
+         <nav id="newsCollapse" class="submenu collapse">
+          <a class="mdl-navigation__link" href="./teaFactoryIntroduction.html">老茶廠的故事</a>
+          <a class="mdl-navigation__link" href="./newFactory.html">新—茶廠</a>
+          <a class="mdl-navigation__link" href="./oldFactory.html">舊—茶廠</a>
+          <a class="mdl-navigation__link" href="./factoryEquipment.html">茶廠設備</a>
+          <a class="mdl-navigation__link" href="./teaEquipment.html">製茶設備</a>
+        </nav>
+        <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#teasCollapse" aria-expanded="false"
+          aria-controls="teasCollapse">茶種介紹</button>
+        <nav id="teasCollapse" class="submenu  collapse">
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#blackTeasCollapse" aria-expanded="false"
+            aria-controls="blackTeasCollapse">紅茶</button>
+          <nav id="blackTeasCollapse" class="submenu  collapse">
+            <a class="mdl-navigation__link" href="./ceylonBlackTea.html">錫蘭紅茶</a>
+            <a class="mdl-navigation__link" href="./assamBlackTea.html">阿薩姆紅茶</a>
+            <a class="mdl-navigation__link" href="./taiwanBlackTea.html">台灣紅茶</a>
+            <a class="mdl-navigation__link" href="./darjeelingBlackTea.html">大吉嶺紅茶</a>
+          </nav>
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#greenTeasCollapse" aria-expanded="false"
+            aria-controls="greenTeasCollapse">綠茶</button>
+          <nav id="greenTeasCollapse" class="submenu  collapse">
+            <a class="mdl-navigation__link" href="./taiwanBiluochunGreenTea.html">台灣碧螺春綠茶</a>
+            <a class="mdl-navigation__link" href="./taiwanLongjingTea.html">台灣龍井茶</a>
+            <a class="mdl-navigation__link" href="./guipingXishanTea.html">桂平西山茶</a>
+            <a class="mdl-navigation__link" href="./afternoonChildCentsCents.html">午子仙毫茶</a>
+          </nav>
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#wulongTeasCollapse" aria-expanded="false"
+            aria-controls="wulongTeasCollapse">烏龍茶</button>
+          <nav id="wulongTeasCollapse" class="submenu  collapse">
+            <a class="mdl-navigation__link" href="./daHongPao.html">大紅袍</a>
+            <a class="mdl-navigation__link" href="./ironGoddessTea.html">鐵觀音</a>
+            <a class="mdl-navigation__link" href="./tungTingTea.html">凍頂烏龍茶</a>
+            <a class="mdl-navigation__link" href="./orientalBeauty.html">東方美人茶</a>
+          </nav>
+        </nav>
+        <a class="mdl-navigation__link" href="businessHoursAndTraffic.html">營業時間&交通</a>
+        <!-- <a href="" class="mdl-navigation__link">餐飲&預約參訪</a> -->
+        <a href="productAndOnlineShopping.html" class="mdl-navigation__link">產品&線上購物</a>
+        <!-- <a href="" class="mdl-navigation__link">購物說明</a> -->
+        <a href="contact.html" class="mdl-navigation__link">聯絡我們</a>
+      </nav>
+    </div>
+  </div>
+  <div class="modal fade" id="login-dialog" tabindex="-1" role="dialog" aria-labelledby="loginModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLongTitle">尚未登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          尚未登入網站，請登入或註冊
+        </div>
+        <div class="modal-footer">
+          <button class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.open('register.html', 'Sign In', 'width=985,height=735');">註冊</button>
+          <button class="btn mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" onclick="window.open('widget.html', 'Sign In', 'width=985,height=735');">Google登入/登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="account-dialog" tabindex="-1" role="dialog" aria-labelledby="accountModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="accountModalLongTitle">歡迎
+            <span class="accountName"></span>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar">
+              <a href="#v-pills-tabContent" class="mdl-tabs__tab is-active">帳戶</a>
+              <a href="#v-pills-profile" class="mdl-tabs__tab">設定</a>
+              <a href="#v-pills-others-settings" class="mdl-tabs__tab">其他</a>
+            </div>
+            <div class="mdl-tabs__panel  is-active" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account">
+                <div class="mdl-grid text-left">
+                  
+                  <div class=" mdl-cell--12-col mb-3">
+                    <div class="text-secondary">帳戶名稱</div>
+                    <div class="accountName"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">帳戶階級</div>
+                      <div class="accountLevel"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">Email</div>
+                      <div class="accountEmail"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">電話</div>
+                      <div class="accountPhone"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">登入方式</div>
+                      <div class="accountProvider"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-tabs__panel" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <form >
+                  <div class="mdl-grid">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
+                        <input class="mdl-textfield__input" type="text" id="account-name">
+                        <label class="mdl-textfield__label" for="account-name">名字</label>
+                      </div>
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
+                          <input class="mdl-textfield__input" type="password" id="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}">
+                          <label class="mdl-textfield__label" for="password">密碼</label>
+                          <span class="mdl-textfield__error">最少8位 含一個以上英文字母及數字</span>
+                      </div>
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-cell mdl-cell--middle "
+                        type="reset">重置</button>
+                      <div class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-button--colored  mdl-cell mdl-cell--middle"
+                        id="saveProfileChange">儲存改動項目</div>
+                    </div>
+              </form>
+          
+            </div>
+            <div class="mdl-tabs__panel" id="v-pills-others-settings" role="tabpanel" aria-labelledby="v-pills-others-settings-tab">
+              <div class="mdl-grid">
+                <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                  onclick="if(confirm('確定要刪除你的帳號?這個動作將無法復原'))firebase.auth().currentUser.delete();">刪除帳號</button>
+                  <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                   onclick="location.href='./news.html'">管理最新消息</button>
+                   <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                   onclick="location.href='./releaseNews.html'">發布消息</button>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" data-dismiss="modal"
+          onclick="firebase.auth().signOut();">登出</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="mdl-grid max-width-limit">
+    <div class="top-56-bar"></div>
+    <div class="mdl-cell mdl-cell--12-col card">
+      <div class="card-header bg-greenery main-bar">
+          <div class="home-img flex-colum "><a href="index.html"><img src="./image/icon/baseline_home_black.png" alt="home_icon"></a></div>
+          <div>></div>
+          <div><a href="teaIntroduction.html" class="link">&nbsp&nbsp茶種介紹&nbsp&nbsp</a></div>
+          <div>></div>
+          <div><a href="blackTea.html" class="link">&nbsp&nbsp紅茶&nbsp&nbsp</a></div>
+          <div>></div>
+          <div><a href="darjeelingBlackTea.html" class="link">&nbsp&nbsp大吉嶺紅茶&nbsp&nbsp</a></div>
+      </div>
+    </div>
+  <div class="mdl-cell mdl-cell--4-col card list_contain hide-max-md">
+    <div class="card-header list flex-colum">紅茶</div>
+    <div class="card-header list2 flex-colum"><a href="./ceylonBlackTea.html" class="link">錫蘭紅茶</a></div>
+    <div class="card-header list2 flex-colum"><a href="./assamBlackTea.html" class="link">阿薩姆紅茶</a></div>
+    <div class="card-header list2 flex-colum"><a href="./taiwanBlackTea.html" class="link">台灣紅茶</a></div>
+    <div class="card-header list2 flex-colum"><a href="./darjeelingBlackTea.html" class="link">大吉嶺紅茶</a></div>
+  </div>
+  <div class="mdl-cell mdl-cell--8-col card border-rect">
+    <div class="card-header">大吉嶺紅茶</div>
+    <div class="card-body card">
+        <p class="word">
+            大吉嶺( Darjeeling )原為藏語，意指雷聲轟隆作響的高地。大吉嶺位於印度東北與尼泊爾交界，是一個坐落於喜瑪拉雅山高地的小鎮，四周環繞著不丹、尼泊爾、錫金，是一個在大文豪馬克吐溫口中，那輕瞥一眼、更勝世間一切美景的地方。<br><br>
+【起源 】
+大吉嶺紅茶味道帶有濃郁果香，在英國享有盛名，故有「紅茶之皇者」的美喻，亦有人稱之為「紅茶中的香檳」。<br>
+大吉嶺種植紅茶已有超過170多年的歷史。<br>
+1834年，英國東印度公司成立植茶問題研究委員會，派遣委員會秘書哥登（G.J.Gordon）到中國買茶籽和茶苗，並聘請栽茶和制茶的亞州技師為指導，傳習制茶方法，栽植於大吉嶺。<br>
+1836年哥登帶回的中國茶工，在阿薩姆勃魯士（C.A.Brace）的茶廠中，用中國製法試製茶樣成功。<br>
+大吉嶺種植紅茶，從1866年的39個小茶園，生產量 21公噸，到現在86個茶園，年產量達1萬公噸的大茶區。根據印度官方的規定，只有從大吉嶺茶區所生產的紅茶才可以用大吉嶺茶(Darkeeling Tea)為名稱。<br>
+由於出身高貴，故亦有不少仿大吉嶺的假茶出現，事實上全球的大吉嶺紅茶每年只出產8000至11000噸，而據稱是大吉嶺的紅茶的總銷量卻有40000噸。<br>
+目前大吉嶺茶區除了當時開拓時所栽種的中國種茶樹外，也栽培了接枝(Clonal)種茶樹及阿薩姆茶樹。<br><br>
+
+【產區概況】<br>
+大吉嶺紅茶產於印度（INDIA）西孟加拉省北部喜馬拉雅山麓的大吉嶺高原（DARJEEING）一帶，是世界四大紅茶之一。<br>
+其茶園分佈於喜馬拉雅山麓(海拔1000-2500公尺) 傾斜的半山坡上，當地白天日照充足，但日夜溫差大，年平均溫度15℃左右，谷裡常年瀰漫雲霧，能夠充分接受陽光和雨水的滋潤與照拂是孕育此茶獨特芳香的一大因素，使這種茶產生一股「麝百葡萄味」，孕育出此茶獨特清新優雅的迷人茶香，故素有「茶中香檳」、「茶中藍山」之稱。<br>
+大吉嶺由於氣候因素，其中嚴寒的冬季，茶樹如同進入冬眠，生長停滯，到春季成長仍相當緩慢，其採收量稀少，但仍需採收摘取新芽，以利量與質均優的夏季茶採收，所以大吉嶺春茶量少。<br>
+也因為氣候仍然寒冷，較不易獲取高發酵程度，大吉嶺茶發酵程度較輕，刺激性較直接，其風味有鮮明的水果芳香風味，有些會帶有青葡萄香味、有時會遇見帶有花香的、也會有帶著輕蜂蜜甜香味的。<br><br>
+
+【製造方法】<br>
+製造工藝是當時正山小種的工藝者帶過去，並加以改造形成的。<br>
+大吉嶺紅茶依不同的採茶季節，其茶色、香味、風味也不同。<br>
+大吉嶺茶一年收成約三次。<br>
+1、春摘（First Flush）：<br>
+比起其他時節的大吉嶺紅茶來，經過春日溫柔蘊藉的雲霧洗禮，滋味往往分外輕揚甜潤，洋溢著清新花香，絕對是不可多得的難忘體驗！<br>
+2、夏摘（Second Flush）：<br>
+亞洲季風吹拂下，香氣與滋味既纖細精雅、卻也同時豐碩飽滿有個性；故夏季節大吉嶺茶向來評價最高、也最受茶饕們的肯定與喜愛。<br>
+3、秋摘（Autumn Flush）：<br>
+秋茶也極富特色。需等到當地雨季過後的9到10月間才能採收製茶，茶色較深、滋味紮實濃厚，價格也相對較為平易；不僅可以輕鬆領略大吉嶺的另種風情，也是三種季節裡最適合用來沖製奶茶的茶款。<br><br>
+
+【特色】<br>
+大吉嶺茶茶性清新優雅，擁有特殊迷人高貴之氣；且隨採摘的季節、海拔與各茶園各年份的差異，個別散發出極緻細膩且不同層次的花果香味，變化多端，耐人尋味。<br>
+大吉嶺茶在其得天獨厚的地理優勢下，加上產季、茶園、年份的不同，發展出各種不同的風味。<br>
+第一季大吉嶺茶發酵程度較輕，其風味有鮮明的新鮮青葉風味，有些會帶有青葡萄香味、有時會遇見帶有花香的、也會有帶著輕蜂蜜甜香味的；至於大吉嶺第二季茶，那可說是百家爭鳴，各家製茶工廠均致力於發展自家的代表特性。第二季茶的茶韻特性普遍呈現濃郁的果香，若細分大致上可分為帶青葉味的果香、帶花香的果香、帶甜味的果香、帶蜂蜜香的甜果香，就口感也會有中性、強勁、及柔軟等不同特性，有些茶平穩內斂耐人細品，有些口感強勁過癮製極，有些茶甘味明顯、有些茶甜味怡人，其百變身影只有飲茶人自身去細細感受，實難三言兩語形容；至於大吉嶺第三季茶口感飽滿、茶韻濃郁，茶湯常有突出的甜味，香氣上青葉味較少，卻多了令人喜愛的甜香味，仔細品嚐秋季茶，有時某些茶款入口後，尾韻會浮現前二季茶較少遇見的微弱的苦味，但是這個微弱的苦味常被突出的甜香味與飽滿的口感掩蓋。<br><br>
+
+總結來說，各季節大吉嶺紅茶的特色如下：<br>
+1、春摘(4~5月採收)<br>
+為黃綠色，在早春溫柔蘊藉的雨水和霧氣籠罩下，使第一摘的大吉嶺有著橘紅色淡雅的茶色與鮮嫩清香，口感輕柔，適合沖泡純紅茶飲用。第一季大吉嶺茶發酵程度較輕，其風味帶有有鮮明的青葉風味。但口感來說，大吉嶺第一季茶刺激性較為直接。<br>
+2、夏摘(6~7月採收)<br>
+為黃褐色，所採摘下來的茶有較濃郁紅色茶色、香氣與滋味也更顯得豐碩飽和有個性，是三次收成裡評價最高的大吉嶺茶。第二季茶發酵程度較高，口感較為溫和，所以也較容易讓人親近。<br>
+3、秋摘(9~10月採收)<br>
+茶色較深、滋味平順，味道也較苦澀，是唯一能用來沖奶茶的大吉嶺茶，而價格也相對平易許多。普遍上第三季大吉嶺茶口感飽滿、茶韻濃郁，茶湯常有突出的甜味。<br>
+
+春季的新茶有著青青嬌嫩的風味與香氣，茶水顏色明亮照人；而夏季採收的茶葉則有著成熟的風味，茶水顏色則偏向色澤較深的金黃色。<br>
+3、4月的一號茶多為青綠色的OP，二號茶為金黃顯露的FOP。<br>
+大吉嶺紅茶以5、6月份的二號茶品質最優，被譽為“紅茶中的香檳”。其湯色橙黃，氣味芬芳高雅，上品尤其帶有葡萄香，口感細緻柔和，適合春秋季飲用，擁有高昂的身價。<br><br>
+
+【大吉嶺紅茶沖泡方法】<br>
+優質珍貴的紅茶當然需要沖泡，才可將其濃郁香氣及韻感引發，如此才不枉集結地利與人和所成紅茶中的極品。<br>
+沖泡方法很簡單，以測量器取用一茶匙的大吉嶺紅茶，使用約180 c.c.的滾燙開水沖泡，浸泡約 5 分鐘，立即過濾及享用，滋味往往分外輕揚甜潤，洋溢著清新的花香，絕對是不可多得的難忘體驗！
+
+         </p>
+  </div>
+</div>
+  <div class="fullfather-width bg-mdlgray">
+    <div class="max-width-limit">
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">
+            版權所有 台灣農林股份有限公司 北科老茶廠
+            <br>台北市大安區忠孝東路三段1號 02 2771 2171
+            <br>Powered by BS4, MDL, firebase Design by XXXX
+          </div>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+          <button id="FB-btn" class="mdl-mini-footer__social-btn"></button>
+          <button id="GPlus-btn" class="mdl-mini-footer__social-btn"></button>
+          <button id="Twitter-btn" class="mdl-mini-footer__social-btn"></button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

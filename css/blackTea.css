@@ -4,22 +4,31 @@
 .top-56-bar {
   width: 100%;
   height: 56px; }
+
+* {
+  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
 .word {
   font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
-.flex-colum {
+.flex-colum{
   display: flex;
   flex-direction: column;}
-.flex-col-title {
-  text-align: center;
+  .list_contain{
+    height: 240px;
+  }
+  .list {
   justify-content: center;
-  font-size: 24px;
+  text-align: center;
+  font-size: 32px;
   height: 80px;}
-.flex-col-item{
+
+.list2{
   justify-content: center;
   font-size: 16px;
-  height: 50px;}
-.fit-content{
-    height: fit-content;}
+  height: 40px;
+}
+.link{
+    color: white;
+}
 .main-bar{
   display: flex;
   flex-direction: row;
@@ -32,8 +41,8 @@
   @media only screen and (max-width: 576px) {
     .index .header-background h1 {
       font-size: 35px; } }
-.flex-col-item:hover{
-    background-color: #88b04b;
-}
+
 .card .card-header {
   color: white; }
+
+

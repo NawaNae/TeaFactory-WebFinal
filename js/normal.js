@@ -55,19 +55,49 @@ class firebaseDynamicChildsHandler
     {
         var container = document.createElement('div'),img=new Image(),title=document.createElement("div"),content=document.createElement("div");
         var textContainer= document.createElement("div");
+        var buttons = document.createElement("div");
+        buttons.className="buttons";
         container.className=(this.containerClassList);
         textContainer.className=(this.textContainerClassList);
         title.className=(this.titleClassList);
         content.className=(this.contentClassList);
+        container.addEventListener("mouseover",function(){
+            if(buttons.classList.contains("bounceIn"))
+                buttons.classList.remove("bounceIn");
+            buttons.classList.add("bounceIn");
+        });
+        container.addEventListener("mouseleave",function()
+        {
+            if(buttons.classList.contains("bounceIn"))
+                buttons.classList.remove("bounceIn");
+        })
         container.appendChild(img);
         container.appendChild(textContainer);
+      
         textContainer.appendChild(title);
         textContainer.appendChild(content);
+        container.appendChild(buttons);
+    
         var containerObj={};
         containerObj.container=container;
         containerObj.img=img;
         containerObj.title= title;
         containerObj.content=content;
+        containerObj.buttons=buttons;
+    
+        var deleteBtn = document.createElement("button");
+        deleteBtn.innerText="刪除";
+        deleteBtn.className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect delete-button";
+        deleteBtn.addEventListener("click",()=>{
+            if(container.dataset.dbkey)
+            {
+                if(confirm("確定要刪除文章?這個操作將無法復原"))
+                    NawaNawa.removeNews(container.dataset.dbkey);
+            }    
+            
+        });
+        componentHandler.upgradeElement(deleteBtn);
+        buttons.appendChild(deleteBtn);
         if(this.father)
             this.father.appendChild(container);
         return containerObj;

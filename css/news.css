@@ -1,3 +1,15 @@
 @charset "UTF-8";
-body[data-user-level-key="管理員"] .news-manager-button {
+body[data-user-level-key="管理員"] #news-container .one-news-container .buttons .delete-button {
+  display: block; }
+
+#news-container .one-news-container .buttons {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 3;
+  display: none; }
+  #news-container .one-news-container .buttons .delete-button {
+    display: none; }
+
+#news-container .one-news-container:hover .buttons {
   display: block; }

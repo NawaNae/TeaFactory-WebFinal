@@ -1,7 +1,42 @@
 body[data-user-level-key="管理員"]
 {
-    .news-manager-button
+    #news-container 
     {
-        display: block;
+        .one-news-container
+        {
+            .buttons
+            {
+                .delete-button
+                {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}
+#news-container 
+{
+    .one-news-container
+    {
+        .buttons
+        {
+            .delete-button
+            {
+                display: none;
+            }
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            z-index: 3;
+            display: none;
+        }
+        &:hover
+        {
+            .buttons
+            {
+                display: block;
+            }
+        }
     }
 }

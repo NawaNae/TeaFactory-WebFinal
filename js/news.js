@@ -1,9 +1,9 @@
 import './normal.js';
 import {NawaNawa} from  './normal.js';
+import {commentBoxR} from './G+.js';
 function getVariable()
 {
     var HashStr = document.location.hash.substring(1, document.location.hash.length);
-    HashStr=HashStr.substring(1, document.location.hash.length);
     return HashStr;
 }
 function hashChangeHandler(e)
@@ -11,13 +11,21 @@ function hashChangeHandler(e)
 
     if(location.hash)
     {
-        var id=NawaNawa.getVariable();
+        var id=getVariable();
         var news = firebase.database().ref("/news/"+id);
-        news.on('value',()=>{
-
-        });
         $("#news-detail").modal('show');
-        $("#news-detail .news-content").html('<div class="mdl-spinner mdl-js-spinner is-active"></div>');
+        $("#news-detail .news-content").html('');
+        var spinner=document.createElement("div");
+        spinner.className="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active";
+        componentHandler.upgradeElement(spinner);
+        document.querySelector(".comment-box-container").appendChild(spinner);
+        news.once('value',(data)=>{
+            var val=data.val();
+            $("#news-detail .news-content").html(val.content);
+            $("#news-detail .news-title").html(val.title);
+            commentBoxR(".comment-box-container");
+        });
+      
 
     }
     else{}
@@ -25,6 +33,8 @@ function hashChangeHandler(e)
 window.onhashchange=hashChangeHandler;
 $(()=>
 {
+
     var news = firebase.database().ref("/news");
     var handler=new NawaNawa.Classes.firebaseDynamicChildsHandler(news,"#news-container",'one-news-container mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone  card flex-md-row bg-alpha border-none','card-body text-md-left','card-title','card-title');
+    hashChangeHandler();
 });

@@ -1,0 +1,3 @@
+@charset "UTF-8";
+body[data-user-level-key="管理員"] .news-manager-button {
+  display: block; }

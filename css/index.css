@@ -1,5 +1,23 @@
 @charset "UTF-8";
+.bg-greenery {
+  background-color: #88b04b; }
 
+.bg-mdlgray {
+  background-color: #424242; }
+
+.bg-alpha {
+  background-color: rgba(0, 0, 0, 0) !important; }
+
+.bg-deepgreen {
+  background-color: #638332; }
+
+* {
+  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
+
+.header-background {
+  background: url("../image/home/navigation.jpg") center/cover;
+  height: 800px;
+  width: 100%; }
 
 .header-background h1 {
   text-shadow: -1px 2px 5px black; }

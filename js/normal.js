@@ -1,5 +1,80 @@
 var NawaNawa=NawaNawa||{};
 NawaNawa.Classes=NawaNawa.Classes||{};
+NawaNawa.Classes.firebaseDynamicChildsHandler=
+class firebaseDynamicChildsHandler
+{
+    constructor(firebaseRef,fatherQuery,containerClassList,textContainerClassList,titleClassList,contentClassList,orderBy='time')
+    {
+        this.ref=firebaseRef;
+        this.containerClassList=containerClassList;
+        this.orderBy=orderBy;
+        this.titleClassList=titleClassList;
+        this.contentClassList=contentClassList;
+        this.fatherQuery=fatherQuery;
+        this.textContainerClassList=textContainerClassList;
+        this.htmlElements=[];
+        this._onValue=data=>{
+            var valsO=data.val();
+            this.htmlElements=[];
+            this.father.innerHTML="";
+            var elements=this.htmlElements;
+
+            var vals=[];
+            for (var key in valsO)
+            {
+                vals.push(valsO[key]);
+                valsO[key].key=key;
+            };
+            while(elements.length<vals.length)
+                elements.push(this.createElement());
+            if(this.orderBy)
+                vals.sort((a,b)=>b[this.orderBy]>a[this.orderBy]);
+            for(var i=0;i<elements.length&&i<vals.length;i++)
+            {
+                var element=elements[i],title=element.title,content=element.content,image=element.img;
+                var val=vals[i];
+                element.container.dataset.dbkey=val.key;
+                if(title)title.innerHTML=val.title;
+                if(content)content.innerHTML=val.content;
+                if(image)image.src=val.image||'./image/home/no_images.png';
+            }
+            this.onValue(data);
+        }
+        if(firebaseRef&&fatherQuery&&containerClassList&&textContainerClassList&&titleClassList&&contentClassList&&orderBy)
+            this.addEventListener();
+    }
+    addEventListener()
+    {
+        if(!this.ref){console.warn("請設定Dbref才會執行handle");return;}
+        if(!this.htmlElements){return;}
+        this.ref.on("value",this._onValue);
+    }
+    onValue(data)
+    {}
+    createElement()
+    {
+        var container = document.createElement('div'),img=new Image(),title=document.createElement("div"),content=document.createElement("div");
+        var textContainer= document.createElement("div");
+        container.className=(this.containerClassList);
+        textContainer.className=(this.textContainerClassList);
+        title.className=(this.titleClassList);
+        content.className=(this.contentClassList);
+        container.appendChild(img);
+        container.appendChild(textContainer);
+        textContainer.appendChild(title);
+        textContainer.appendChild(content);
+        var containerObj={};
+        containerObj.container=container;
+        containerObj.img=img;
+        containerObj.title= title;
+        containerObj.content=content;
+        if(this.father)
+            this.father.appendChild(container);
+        return containerObj;
+    }
+    get father()
+    {if(this.fatherQuery)return document.querySelector(this.fatherQuery);}
+}
 NawaNawa.Classes.firebaseChildsHandler=
 class firebaseChildsHandler
 {
@@ -15,13 +90,18 @@ class firebaseChildsHandler
             var valsO=data.val();
             var elements=this.htmlElements;
             var vals=[];
-            for (var key in valsO)vals.push(valsO[key]);
+            for (var key in valsO)
+            {
+                vals.push(valsO[key])
+                valsO[key].key=key;
+            };
             if(this.orderBy)
                 vals.sort((a,b)=>b[this.orderBy]>a[this.orderBy]);
             for(var i=0;i<elements.length&&i<vals.length;i++)
             {
                 var element=elements[i],title=element.querySelector(this.titleQuery),content=element.querySelector(this.contentQuery),image=element.querySelector(this.imageQuery);
                 var val=vals[i];
+                element.dataset.dbkey=val.key;
                 if(title)title.innerHTML=val.title;
                 if(content)content.innerHTML=val.content;
                 if(image)image.src=val.image||'./image/home/no_images.png';

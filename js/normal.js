@@ -93,7 +93,7 @@ class ScrollController
 NawaNawa.userLevelKey=function(uid)
 {
     var levelUidTable={
-        管理員:['syF5GwOXBcPPhfS6CJ66lbQuOea2']
+        管理員:['syF5GwOXBcPPhfS6CJ66lbQuOea2','BEhHWgsSTGaJV91kzgNxF2LbUPD2']
     };
 
     var levelKey;

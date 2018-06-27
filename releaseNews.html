@@ -17,7 +17,8 @@
   <!-- <script src="js/index.js" type="module"></script> -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <script src="js/normal.js" type="module"></script>
+  <link rel="stylesheet" href="css/releaseNews.css">
+  <script src="js/releaseNews.js" type="module"></script>
 </head>
 
 <body class="">
@@ -34,7 +35,7 @@
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link hide-max-sm" href="news.html">最新消息</a>
+            <a class="mdl-navigation__link hide-max-sm" href="Lews.html">最新消息</a>
             <a class="mdl-navigation__link hide-max-pc" href="teaFactoryIntroduction.html">茶廠介紹</a>
             <a class="mdl-navigation__link hide-max-xs" href="teaIntroduction.html">茶種介紹</a>
             <a class="mdl-navigation__link hide-max-pc" href="businessHoursAndTraffic.html">營業時間&交通</a>
@@ -206,9 +207,9 @@
   
   <div class="top-64-bar"></div>
   <div class="top-64-bar"></div>  <div class="mdl-grid max-width-limit">
-    <div class="card flex-md-row">
+    <div class="card flex-md-row mx-auto">
       <figure class="imghvr-fade">
-        <img src="image/home/news_1.jpg" alt="">
+        <img src="image/home/no_images.png" alt="">
         <figcaption style="background-color: #baa619">
           <h1>主要圖片設定</h1>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label  ">
@@ -227,7 +228,7 @@
                 <textarea class="mdl-textfield__input" type="text" rows="3" id="article-content"></textarea>
                 <label class="mdl-textfield__label" for="article-content">內容</label>
               </div>
-              <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect mdl-cell " data-dismiss="modal" onclick="">發布消息</button>
+              <button type="button" id="release-button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect mdl-cell " data-dismiss="modal" onclick="">發布消息</button>
         </div>
        
       </div>

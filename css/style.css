@@ -20,8 +20,8 @@
 .bg-alpha, .mdl-mini-footer {
   background-color: rgba(0, 0, 0, 0) !important; }
 
-.bg-deepgreen {
-  background-color: #837732; }
+.bg-deepgreen, .card-header {
+  background-color: #638332; }
 
 .bg-gradient--keymeh {
   background: #8360c3;

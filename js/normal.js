@@ -131,12 +131,12 @@ import {firebaseConfig} from './firebaseconfig.js';
           
           user. getIdToken().then(function(accessToken) {
             $('#login-dialog').modal('hide');
-            $('.accountName').text(displayName);
+            $('.accountName').text(displayName||"未設定");
             $('.accountLevel').text(NawaNawa.userLevelKey(uid));
-            $('.accountEmail').text("email\t"+email + " " + (emailVerified?"驗證":"未驗證"));
-            $('.accountPhone').text("電話\t"+phoneNumber);
+            $('.accountEmail').text(email||"未設定" + " " + (emailVerified?"已驗證":"未驗證"));
+            $('.accountPhone').text(phoneNumber||"未設定");
             //console.log(providerData);
-            $('.accountProvider').text("登入方式\t"+providerData[0].providerId);
+            $('.accountProvider').text(providerData[0].providerId);
             document.getElementById('account-button').dataset.target="#account-dialog";
             document.body.dataset.userLevelKey=NawaNawa.userLevelKey(uid);
           });

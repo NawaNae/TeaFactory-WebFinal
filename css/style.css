@@ -20,8 +20,8 @@
 .bg-alpha, .mdl-mini-footer {
   background-color: rgba(0, 0, 0, 0) !important; }
 
-.bg-deepgreen {
-  background-color: #93c47d; }
+.bg-deepgreen, .card-header {
+  background-color: #638332; }
 
 .bg-gradient--keymeh {
   background: #8360c3;
@@ -184,6 +184,9 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, .mdl-layout-title {
   font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
+
+.card .card-header {
+  color: white; }
 
 .border-rect {
   border-radius: 0 !important; }

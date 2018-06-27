@@ -35,3 +35,7 @@
 }
 .card .card-header {
   color: white; }
+.navBar{
+  color: white;}
+.navBar:hover{
+  color: #bff56e;}

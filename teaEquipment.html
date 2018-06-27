@@ -1,0 +1,281 @@
+<!doctype html>
+<html itemscope="" itemtype="http://schema.org/Website" lang="en">
+
+<head>
+  <title>北科老茶廠-製茶設備</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <!-- <script src="js/normal.js" type=module></script> -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="js/normal.js" type="module"></script>
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/teaEquipment.css">
+</head>
+
+<body class="index ">
+  <div class=" mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class=" mdl-layout__header fixed-top bg-greenery fullfather-width">
+      <div class="max-width-limit bg-greenery">
+
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">
+            <a class="mdl-layout-title__link" href="index.html">北科老茶廠
+              <br>TaipeiTech Tea Factory</a>
+          </span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link hide-max-sm" href="news.html">最新消息</a>
+            <a class="mdl-navigation__link hide-max-pc" href="teaFactoryIntroduction.html">茶廠介紹</a>
+            <a class="mdl-navigation__link hide-max-xs" href="teaIntroduction.html">茶種介紹</a>
+            <a class="mdl-navigation__link hide-max-pc" href="businessHoursAndTraffic.html">營業時間&交通</a>
+            <a href="productAndOnlineShopping.html" class="mdl-navigation__link  hide-max-xs">產品&線上購物</a>
+            <a href="contact.html" class="mdl-navigation__link hide-max-pc">聯絡我們</a>
+            <button class="mdl-navigation__link " data-toggle="modal" id="account-button" data-target="#login-dialog">
+              <i class="material-icons">account_circle</i>
+            </button>
+          </nav>
+          <!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                        mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </header>
+    <div class="mdl-layout__drawer fixed-top">
+      <span class="mdl-layout-title">
+        <a class="mdl-layout-title__link" href="index.html">北科老茶廠</a>
+      </span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="news.html">最新消息</a>
+        <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#newsCollapse" aria-expanded="false"
+          aria-controls="newsCollapse">茶廠介紹</button>
+          <nav id="newsCollapse" class="submenu collapse">
+            <a class="mdl-navigation__link" href="./teaFactoryIntroduction.html">老茶廠的故事</a>
+            <a class="mdl-navigation__link" href="./newFactory.html">新—茶廠</a>
+            <a class="mdl-navigation__link" href="./oldFactory.html">舊—茶廠</a>
+            <a class="mdl-navigation__link" href="./factoryEquipment.html">茶廠設備</a>
+            <a class="mdl-navigation__link" href="./teaEquipment.html">製茶設備</a>
+          </nav>
+          <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#teasCollapse" aria-expanded="false"
+            aria-controls="teasCollapse">茶種介紹</button>
+          <nav id="teasCollapse" class="submenu  collapse">
+            <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#blackTeasCollapse" aria-expanded="false"
+              aria-controls="blackTeasCollapse">紅茶</button>
+            <nav id="blackTeasCollapse" class="submenu  collapse">
+              <a class="mdl-navigation__link" href="./ceylonBlackTea.html">錫蘭紅茶</a>
+              <a class="mdl-navigation__link" href="./assamBlackTea.html">阿薩姆紅茶</a>
+              <a class="mdl-navigation__link" href="./taiwanBlackTea.html">台灣紅茶</a>
+              <a class="mdl-navigation__link" href="./darjeelingBlackTea.html">大吉嶺紅茶</a>
+            </nav>
+            <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#greenTeasCollapse" aria-expanded="false"
+              aria-controls="greenTeasCollapse">綠茶</button>
+            <nav id="greenTeasCollapse" class="submenu  collapse">
+              <a class="mdl-navigation__link" href="./taiwanBiluochunGreenTea.html">台灣碧螺春綠茶</a>
+              <a class="mdl-navigation__link" href="./taiwanLongjingTea.html">台灣龍井茶</a>
+              <a class="mdl-navigation__link" href="./guipingXishanTea.html">桂平西山茶</a>
+              <a class="mdl-navigation__link" href="./afternoonChildCentsCents.html">午子仙毫茶</a>
+            </nav>
+            <button class="mdl-navigation__link" type="button" data-toggle="collapse" data-target="#wulongTeasCollapse" aria-expanded="false"
+              aria-controls="wulongTeasCollapse">烏龍茶</button>
+            <nav id="wulongTeasCollapse" class="submenu  collapse">
+              <a class="mdl-navigation__link" href="./daHongPao.html">大紅袍</a>
+              <a class="mdl-navigation__link" href="./ironGoddessTea.html">鐵觀音</a>
+              <a class="mdl-navigation__link" href="./tungTingTea.html">凍頂烏龍茶</a>
+              <a class="mdl-navigation__link" href="./orientalBeauty.html">東方美人茶</a>
+            </nav>
+        </nav>
+        <a class="mdl-navigation__link" href="businessHoursAndTraffic.html">營業時間&交通</a>
+        <!-- <a href="" class="mdl-navigation__link">餐飲&預約參訪</a> -->
+        <a href="productAndOnlineShopping.html" class="mdl-navigation__link">產品&線上購物</a>
+        <!-- <a href="" class="mdl-navigation__link">購物說明</a> -->
+        <a href="contact.html" class="mdl-navigation__link">聯絡我們</a>
+      </nav>
+    </div>
+  </div>
+  <div class="modal fade" id="login-dialog" tabindex="-1" role="dialog" aria-labelledby="loginModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLongTitle">尚未登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          尚未登入網站，請登入或註冊
+        </div>
+        <div class="modal-footer">
+          <button class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.open('register.html', 'Sign In', 'width=985,height=735');">註冊</button>
+          <button class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.open('widget.html', 'Sign In', 'width=985,height=735');">Google登入/登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="account-dialog" tabindex="-1" role="dialog" aria-labelledby="accountModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="accountModalLongTitle">歡迎
+            <span class="accountName"></span>
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar">
+              <a href="#v-pills-tabContent" class="mdl-tabs__tab is-active">帳戶</a>
+              <a href="#v-pills-profile" class="mdl-tabs__tab">設定</a>
+              <a href="#v-pills-others-settings" class="mdl-tabs__tab">其他</a>
+            </div>
+            <div class="mdl-tabs__panel  is-active" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account">
+                <div class="mdl-grid text-left">
+                  <div class="accountName mdl-cell--12-col"></div>
+                  <div class="accountLevel mdl-cell--12-col"></div>
+                  <div class="accountEmail mdl-cell--12-col"></div>
+                  <div class="accountPhone mdl-cell--12-col"></div>
+                  <div class="accountProvider mdl-cell--12-col"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-tabs__panel" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <form >
+                  <div class="mdl-grid">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+                        <input class="mdl-textfield__input" type="text" id="account-name">
+                        <label class="mdl-textfield__label" for="account-name">名字</label>
+                      </div>
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+                          <input class="mdl-textfield__input" type="password" id="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}">
+                          <label class="mdl-textfield__label" for="password">密碼</label>
+                          <span class="mdl-textfield__error">最少8位 含一個以上英文字母及數字</span>
+                      </div>
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-cell mdl-cell--2-col mdl-cell--2-offset-desktop  "
+                        type="reset">重置</button>
+                      <div class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-cell mdl-cell--2-col"
+                        id="saveProfileChange">儲存改動項目</div>
+                    </div>
+              </form>
+          
+            </div>
+            <div class="mdl-tabs__panel" id="v-pills-others-settings" role="tabpanel" aria-labelledby="v-pills-others-settings-tab">
+              <div class="mdl-grid">
+                <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" data-dismiss="modal"
+                  onclick="if(confirm('確定要刪除你的帳號?這個動作將無法復原'))firebase.auth().currentUser.delete();">刪除帳號</button>
+              </div>
+            </div>
+          </div>
+          <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account"
+                aria-selected="false">帳戶</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                aria-selected="false">設定</a>
+              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-others-settings" role="tab" aria-controls="v-pills-others-settings"
+                aria-selected="false">其他功能</a>
+            </div>
+            </ul> -->
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" data-dismiss="modal"
+          onclick="firebase.auth().signOut();">登出</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <!-- main -->
+  <div class="mdl-grid max-width-limit">
+    <div class="top-56-bar"></div>
+    <div class="mdl-cell mdl-cell--12-col card hide-max-sm">
+      <div class="card-header bg-greenery main-bar">
+          <a href="index.html"><div class="home-img flex-colum "><img src="./image/icon/baseline_home_black.png" alt="home_icon"></div></a>
+          <a href="teaFactoryIntroduction.html" class="navBar"><div>>&nbsp茶廠介紹&nbsp</div></a>
+          <a href="teaEquipment.html" class="navBar"><div>>&nbsp製茶設備</div></a>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--4-col card list flex-colum fit-content hide-max-md">
+        <div class="card-header list flex-colum flex-col-title">茶廠介紹</div>
+        <a href="teaFactoryIntroduction.html" class="card-header flex-colum flex-col-item word">●&nbsp&nbsp老茶廠的故事</a>
+        <a href="newFactory.html" class="card-header flex-colum flex-col-item word">●&nbsp&nbsp新—茶廠</a>
+        <a href="oldFactory.html" class="card-header flex-colum flex-col-item word">●&nbsp&nbsp舊—茶廠</a>
+        <a href="factoryEquipment.html" class="card-header flex-colum flex-col-item word">●&nbsp&nbsp茶廠設備</a>
+        <a href="teaEquipment.html" class="card-header flex-colum flex-col-item word">●&nbsp&nbsp製茶設備</a>
+    </div>
+    <div class="mdl-cell mdl-cell--8-col card border-rect">
+        <div class="card-header">北科老茶廠製茶設備</div>
+        <div class="card-body card">
+            <p class="word">＊傑克遜揉捻機 (40年代)<br>
+                    1872年由英國人威廉傑克遜（William Jackson）發明的茶葉專用揉捻機，開啟現代製茶機械化的先河。大溪老茶廠在日治時期就引進六座36吋
+                    傑克遜式揉捻機，上下銅製輪盤可雙動運轉，藉由機械揉捻過程，破壞茶葉細胞，促使茶汁流出附著於葉面，利於沖泡時溶出。此舉將當時台灣傳統手工製茶，
+                    轉為半機械式製茶，不僅大大提升製茶效率，其揉捻出的捲曲條形紅茶外觀，更成了傳統紅茶的代表。<br><br>
+                    ＊浪菁機<br>
+                    藉由翻攪方式，使茶菁相互摩擦以活化葉緣細胞，讓空氣進入葉肉細胞內，加速發酵作用進行。而翻動攪拌的動作也有助於茶葉均勻「走水」。
+                    (走水即蒸散之意)<br><br>
+                    ＊炒菁機<br>
+                    炒菁目的是以高溫破壞酵素活性，抑制茶葉持續發酵，進而去除鮮葉中的臭菁味，以保有部份發酵茶特有的香氣及滋味。同時，
+                    也因殺菁時葉中水分的大量蒸散，使茶菁質地變柔軟，有利於後續揉捻成型及乾燥的處理。<br><br>
+                    ＊解塊機<br>
+                    解塊機是針對揉捻過後，茶葉因捲縮互相黏結成塊的情形來進行解開的動作，經解塊後茶葉會散開，有助於乾燥及後續作業的進行。<br><br>
+                    ＊篩分機<br>
+                    使用篩分機將正茶及副茶(茶角、茶末)分離，使茶葉大小一致和品質穩定。<br><br>
+                    ＊甲種乾燥機 <br>
+                    利用甲種乾燥機的熱風烘乾揉捻後之茶葉，使其含水量低於百分之五，利於貯藏運銷。
+                    通常為了能使茶葉內外乾燥一致，常採二次乾燥法，先使其達到七、八成乾燥，然後取出回潮，再進行第二次的乾燥。</p>
+            <div><img src="./image/茶廠介紹/equipment2.jpg" alt="" class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone"></div>
+        </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="fullfather-width bg-mdlgray">
+    <div class="max-width-limit">
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">
+            版權所有 台灣農林股份有限公司 北科老茶廠
+            <br>台北市大安區忠孝東路三段1號 02 2771 2171
+            <br>Powered by BS4, MDL, firebase Design by XXXX
+          </div>
+        </div>
+        <div class="mdl-mini-footer__right-section">
+          <button id="FB-btn" class="mdl-mini-footer__social-btn"></button>
+          <button id="GPlus-btn" class="mdl-mini-footer__social-btn"></button>
+          <button id="Twitter-btn" class="mdl-mini-footer__social-btn"></button>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

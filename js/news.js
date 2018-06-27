@@ -22,6 +22,7 @@ function hashChangeHandler(e)
         news.once('value',(data)=>{
             var val=data.val();
             $("#news-detail .news-content").html(val.content);
+            document.querySelector("#GP").innerHTML='<script src="https://apis.google.com/js/platform.js" async defer></script><g:plusone></g:plusone>'
             $("#news-detail .news-title").html(val.title);
             commentBoxR(".comment-box-container");
         });

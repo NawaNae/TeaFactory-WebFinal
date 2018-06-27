@@ -1,24 +1,10 @@
 @charset "UTF-8";
-.bg-black {
-    background-color: black;
-}
-.bg-greenery {
-  background-color: #88b04b; }
 
-.bg-mdlgray {
-  background-color: #424242; }
-
-.bg-alpha {
-  background-color: rgba(0, 0, 0, 0) !important; }
-
-.bg-deepgreen, .index .card-header {
-  background-color: #93c47d; }
 
 .top-56-bar {
   width: 100%;
   height: 56px; }
-* {
-  font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
+
 .word {
   font-family: "Noto Sans CJK TC Regular", "微軟正黑體", sans-serif; }
 .flex-colum {

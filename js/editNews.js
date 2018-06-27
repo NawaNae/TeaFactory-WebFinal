@@ -5,7 +5,7 @@ function getVariable()
     var HashStr = document.location.hash.substring(1, document.location.hash.length);
     return HashStr;
 }
-var id;
+var id,time;
 function hashChangeHandler(e)
 {
 
@@ -28,6 +28,7 @@ function hashChangeHandler(e)
             document.querySelector(".card img").src=val.image;
             title.value=val.title;
             content.value=val.content;
+            time=val.time;
         });
       
 
@@ -61,7 +62,7 @@ function resetNews(title,content,imgSrc,uid=id)
             image:imgSrc,
             title:title,
             content:content,
-            time:(new Date(Date.now())).toJSON()
+            time:time||(new Date(Date.now())).toJSON()
         }
         next(newnews);
     };
@@ -70,7 +71,7 @@ function resetNews(title,content,imgSrc,uid=id)
         var newnews={
             title:title,
             content:content,
-            time:(new Date(Date.now())).toJSON()
+            time:time||(new Date(Date.now())).toJSON()
         }
         next(newnews);
     };

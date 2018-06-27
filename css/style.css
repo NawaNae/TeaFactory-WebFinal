@@ -191,6 +191,10 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .border-none {
   border-style: none !important; }
 
+.top-64-bar {
+  width: 100%;
+  height: 64px; }
+
 .mdl-layout__obfuscator.is-visible {
   position: fixed; }
 
@@ -201,6 +205,12 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .mdl-mini-footer {
   padding-left: 8px;
   padding-right: 8px; }
+
+.news-manager-button {
+  display: none; }
+
+body[data-user-level-key="管理員"] .news-manager-button {
+  display: block; }
 
 .mdl-layout__header.fixed-top.mdl-layout__header--transparent {
   background-color: rgba(62, 80, 34, 0.455); }
@@ -232,12 +242,9 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 
 #account-dialog .mdl-tabs__panel {
   min-height: 250px; }
-  @media only screen and (min-width: 992px) {
-    #account-dialog .mdl-tabs__panel {
-      min-width: 900px; } }
   @media only screen and (min-width: 576px) {
     #account-dialog .mdl-tabs__panel {
-      min-width: 500px; } }
+      min-width: 450px; } }
 
 .mdl-layout-title .mdl-layout-title__link {
   color: white;

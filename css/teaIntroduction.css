@@ -12,6 +12,9 @@
 .flex-colum{
   display: flex;
   flex-direction: column;}
+.list_contain{
+  height: 200px;
+}
 .list {
     justify-content: center;
     text-align: center;

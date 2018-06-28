@@ -1,3 +1,5 @@
+document.body.innerHTML+='<div id="loader" class="d-flex" style="width:100vw;height:100vh;position:fixed;z-index: 3;top:64px;left:0px;background-color: rgba(0,0,0,0.5) " onload=""> <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active m-auto" ></div> </div>';
+setTimeout(()=>document.getElementById('loader').remove(),1500);
 var NawaNawa=NawaNawa||{};
 NawaNawa.Classes=NawaNawa.Classes||{};
 NawaNawa.Classes.firebaseDynamicChildsHandler=
@@ -312,7 +314,8 @@ export {NawaNawa} ;
 window.addEventListener("load",()=>
 {
   
-
+    
+   
     initApp();
     $("#saveProfileChange").on('click',function()
     {
@@ -331,6 +334,7 @@ window.addEventListener("load",()=>
         }).catch(function(error) {
             console.log(error.message);
         });
+   
     })
 });
 

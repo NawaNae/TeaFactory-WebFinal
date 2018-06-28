@@ -34,7 +34,7 @@ function hashChangeHandler(e)
 window.onhashchange=hashChangeHandler;
 $(()=>
 {
-    setTimeout(()=>document.getElementById('loader').remove(),3500)
+
     var news = firebase.database().ref("/news");
     var handler=new NawaNawa.Classes.firebaseDynamicChildsHandler(news,"#news-container",'one-news-container mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone  card flex-md-row bg-alpha border-none','card-body text-md-left','card-title','card-title');
     hashChangeHandler();

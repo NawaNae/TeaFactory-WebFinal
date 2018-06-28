@@ -200,9 +200,6 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .top-64-bar {
   width: 100%;
   height: 64px; }
-.top-56-bar {
-    width: 100%;
-  height: 56px; }
 
 .mdl-layout__obfuscator.is-visible {
   position: fixed; }

@@ -57,7 +57,11 @@ body[data-user-level-key="管理員"] .news .one-news-container[data-overflow='1
     @media only screen and (max-width: 768px) {
       .news .card .card-body {
         height: auto;
-        max-height: 800px; } }
+        max-height: 200px; } }
+    @media only screen and (max-width: 576px) {
+      .news .card .card-body {
+        height: auto;
+        max-height: 400px; } }
   @media only screen and (min-width: 840px) {
     .news .card {
       height: 200px; }

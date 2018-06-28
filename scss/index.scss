@@ -12,7 +12,72 @@ $normal-font-family:'Noto Sans CJK TC Regular','微軟正黑體',sans-serif;
     height: 800px;
     width:100%;
 }
-
+body[data-user-level-key="管理員"]
+{
+    .news
+    {
+        .one-news-container
+        {
+            .buttons
+            {
+                .delete-button,.edit-button
+                {
+                    display: block;
+                }
+            }
+            &[data-overflow='1']
+            {
+                .buttons
+                {
+                     .delete-button,.edit-button
+                     {
+                         display: none;
+                     }
+                }
+                &:hover
+                {
+                    .delete-button,.edit-button
+                    {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+.news
+{
+    .one-news-container
+    {
+        
+        .buttons
+        {
+            .delete-button,.edit-button
+            {
+                display: none;
+            }
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            z-index: 3;
+            display: none;
+        }
+        &[data-overflow='1']
+       {
+           .buttons
+           {
+               display: block;
+           }
+       }
+        &:hover
+        {
+            .buttons
+            {
+                display: block;
+            }
+        }
+    }
+}
  
 .header-background
 {

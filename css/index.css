@@ -19,6 +19,30 @@
   height: 800px;
   width: 100%; }
 
+body[data-user-level-key="管理員"] .news .one-news-container .buttons .delete-button, body[data-user-level-key="管理員"] .news .one-news-container .buttons .edit-button {
+  display: block; }
+
+body[data-user-level-key="管理員"] .news .one-news-container[data-overflow='1'] .buttons .delete-button, body[data-user-level-key="管理員"] .news .one-news-container[data-overflow='1'] .buttons .edit-button {
+  display: none; }
+
+body[data-user-level-key="管理員"] .news .one-news-container[data-overflow='1']:hover .delete-button, body[data-user-level-key="管理員"] .news .one-news-container[data-overflow='1']:hover .edit-button {
+  display: block; }
+
+.news .one-news-container .buttons {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 3;
+  display: none; }
+  .news .one-news-container .buttons .delete-button, .news .one-news-container .buttons .edit-button {
+    display: none; }
+
+.news .one-news-container[data-overflow='1'] .buttons {
+  display: block; }
+
+.news .one-news-container:hover .buttons {
+  display: block; }
+
 .header-background h1 {
   text-shadow: -1px 2px 5px black; }
   @media only screen and (max-width: 576px) {

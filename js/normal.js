@@ -36,6 +36,9 @@ class firebaseDynamicChildsHandler
                 element.container.dataset.dbkey=val.key;
                 if(title)title.innerHTML=val.title;
                 if(content)content.innerHTML=val.content;
+                if(val.content.length>50)
+                    element.container.dataset.overflow=1;
+
                 if(image)image.src=val.image||'./image/home/no_images.png';
             }
             this.onValue(data);
@@ -82,7 +85,9 @@ class firebaseDynamicChildsHandler
         containerObj.container=container;
         containerObj.img=img;
         containerObj.title= title;
+        
         containerObj.content=content;
+
         containerObj.buttons=buttons;
         var deleteBtn = document.createElement("button");
         deleteBtn.innerText="刪除";
@@ -156,6 +161,10 @@ class firebaseChildsHandler
                 element.dataset.dbkey=val.key;
                 if(title)title.innerHTML=val.title;
                 if(content)content.innerHTML=val.content;
+                if(val.content.length>50)
+                    element.dataset.overflow=1;
+                else
+                    delete element.dataset.overflow;
                 if(image)image.src=val.image||'./image/home/no_images.png';
             }
             this.onValue(data);

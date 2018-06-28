@@ -188,6 +188,9 @@ h1, h2, h3, h4, h5, h6, .mdl-layout-title {
 .card .card-header {
   color: white; }
 
+.buttons {
+  background-color: #e0e0e0; }
+
 .border-rect {
   border-radius: 0 !important; }
 

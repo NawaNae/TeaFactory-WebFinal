@@ -11,7 +11,23 @@ body[data-user-level-key="管理員"]
                     display: block;
                 }
             }
-
+            &[data-overflow='1']
+            {
+                .buttons
+                {
+                     .delete-button,.edit-button
+                     {
+                         display: none;
+                     }
+                }
+                &:hover
+                {
+                    .delete-button,.edit-button
+                    {
+                        display: block;
+                    }
+                }
+            }
         }
     }
 }
@@ -19,6 +35,7 @@ body[data-user-level-key="管理員"]
 {
     .one-news-container
     {
+        
         .buttons
         {
             .delete-button,.edit-button
@@ -31,6 +48,13 @@ body[data-user-level-key="管理員"]
             z-index: 3;
             display: none;
         }
+        &[data-overflow='1']
+       {
+           .buttons
+           {
+               display: block;
+           }
+       }
         &:hover
         {
             .buttons

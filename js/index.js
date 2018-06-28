@@ -48,4 +48,25 @@ window.addEventListener("load",()=>{
         }
      
     }
+    $('.buttons .delete-button').on('click',function()
+    {
+        var container=this.parentNode.parentNode;
+            if(container.dataset.dbkey)
+                if(confirm("確定要刪除文章?這個操作將無法復原"))
+                    NawaNawa.removeNews(container.dataset.dbkey); 
+    });
+    $('.buttons .edit-button').on('click',function()
+    {
+        var container=this.parentNode.parentNode;
+        if(container.dataset.dbkey)
+        {
+            location.href="editNews.html#"+container.dataset.dbkey;
+        }    
+    });
+    $('.buttons .read-button').on('click',function()
+    {
+        var container=this.parentNode.parentNode;
+        if(container.dataset.dbkey)
+            location.href="news.html#"+container.dataset.dbkey;
+    })
 });

@@ -138,72 +138,71 @@
             </div>
             <div class="mdl-tabs__panel  is-active" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account">
-                  <div class="mdl-grid text-left">
+                <div class="mdl-grid text-left">
                   
-                      <div class=" mdl-cell--12-col mb-3">
-                        <div class="text-secondary">帳戶名稱</div>
-                        <div class="accountName"></div>
-                      </div>
-                      <div class=" mdl-cell--12-col mb-3">
-                          <div class="text-secondary">帳戶階級</div>
-                          <div class="accountLevel"></div>
-                      </div>
-                      <div class=" mdl-cell--12-col mb-3">
-                          <div class="text-secondary">Email</div>
-                          <div class="accountEmail"></div>
-                      </div>
-                      <div class=" mdl-cell--12-col mb-3">
-                          <div class="text-secondary">電話</div>
-                          <div class="accountPhone"></div>
-                      </div>
-                      <div class=" mdl-cell--12-col mb-3">
-                          <div class="text-secondary">登入方式</div>
-                          <div class="accountProvider"></div>
-                      </div>
-                    </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                    <div class="text-secondary">帳戶名稱</div>
+                    <div class="accountName"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">帳戶階級</div>
+                      <div class="accountLevel"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">Email</div>
+                      <div class="accountEmail"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">電話</div>
+                      <div class="accountPhone"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">登入方式</div>
+                      <div class="accountProvider"></div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="mdl-tabs__panel" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-              <form>
-                <div class="mdl-grid">
-                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
-                    <input class="mdl-textfield__input" type="text" id="account-name">
-                    <label class="mdl-textfield__label" for="account-name">名字</label>
-                  </div>
-                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
-                    <input class="mdl-textfield__input" type="password" id="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}">
-                    <label class="mdl-textfield__label" for="password">密碼</label>
-                    <span class="mdl-textfield__error">最少8位 含一個以上英文字母及數字</span>
-                  </div>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-cell mdl-cell--middle " type="reset">重置</button>
-                  <div class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-button--colored  mdl-cell mdl-cell--middle"
-                    id="saveProfileChange">儲存改動項目</div>
-                </div>
+              <form >
+                  <div class="mdl-grid">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
+                        <input class="mdl-textfield__input" type="text" id="account-name">
+                        <label class="mdl-textfield__label" for="account-name">名字</label>
+                      </div>
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
+                          <input class="mdl-textfield__input" type="password" id="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}">
+                          <label class="mdl-textfield__label" for="password">密碼</label>
+                          <span class="mdl-textfield__error">最少8位 含一個以上英文字母及數字</span>
+                      </div>
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-cell mdl-cell--middle "
+                        type="reset">重置</button>
+                      <div class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-button--colored  mdl-cell mdl-cell--middle"
+                        id="saveProfileChange">儲存改動項目</div>
+                    </div>
               </form>
-
+          
             </div>
             <div class="mdl-tabs__panel" id="v-pills-others-settings" role="tabpanel" aria-labelledby="v-pills-others-settings-tab">
               <div class="mdl-grid">
-                <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-js-ripple-effect mdl-cell mdl-cell--middle"
-                  data-dismiss="modal" onclick="if(confirm('確定要刪除你的帳號?這個動作將無法復原'))firebase.auth().currentUser.delete();">刪除帳號</button>
-                <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle"
-                  data-dismiss="modal" onclick="location.href='./news.html'">管理最新消息</button>
-                <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle"
-                  data-dismiss="modal" onclick="location.href='./releaseNews.html'">發布消息</button>
+                <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                  onclick="if(confirm('確定要刪除你的帳號?這個動作將無法復原'))firebase.auth().currentUser.delete();">刪除帳號</button>
+                  <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                   onclick="location.href='./news.html'">管理最新消息</button>
+                   <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                   onclick="location.href='./releaseNews.html'">發布消息</button>
               </div>
             </div>
           </div>
 
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" data-dismiss="modal"
-            onclick="firebase.auth().signOut();">登出</button>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" data-dismiss="modal"
+          onclick="firebase.auth().signOut();">登出</button>
       </div>
     </div>
   </div>
-
+  </div>
   
   <div class="top-64-bar"></div>
   <div class="top-64-bar"></div>  <div class="mdl-grid max-width-limit">

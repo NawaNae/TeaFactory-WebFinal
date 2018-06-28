@@ -103,6 +103,12 @@ body[data-user-level-key="管理員"]
             @include breakpointMax(sm)
             {
                 height: auto;
+                max-height: 200px;
+            }
+            @include breakpointMax(xs)
+            {
+                height: auto;
+                max-height: 400px;
             }
         }
         

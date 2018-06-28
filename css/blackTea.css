@@ -26,9 +26,7 @@
   font-size: 16px;
   height: 40px;
 }
-.link{
-    color: white;
-}
+
 .main-bar{
   display: flex;
   flex-direction: row;
@@ -46,5 +44,14 @@
 }
 .card .card-header {
   color: white; }
-
+.link{
+    color: white;
+}
+.link:havor{
+  color:#bff56e;
+}
+.navBar{
+  color: white;}
+.navBar:hover{
+  color: #bff56e;}
 

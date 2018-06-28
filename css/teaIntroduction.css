@@ -47,5 +47,10 @@
   .flex-col-item:hover{
     background-color: #88b04b;
 }
+.navBar{
+  color: white;}
+.navBar:hover{
+  color: #bff56e;}
+
 
 

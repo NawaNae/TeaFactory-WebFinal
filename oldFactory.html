@@ -123,7 +123,7 @@
         </div>
         <div class="modal-footer">
           <button class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.open('register.html', 'Sign In', 'width=985,height=735');">註冊</button>
-          <button class="btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="window.open('widget.html', 'Sign In', 'width=985,height=735');">Google登入/登入</button>
+          <button class="btn mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" onclick="window.open('widget.html', 'Sign In', 'width=985,height=735');">Google登入/登入</button>
         </div>
       </div>
     </div>
@@ -149,29 +149,45 @@
             <div class="mdl-tabs__panel  is-active" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account">
                 <div class="mdl-grid text-left">
-                  <div class="accountName mdl-cell--12-col"></div>
-                  <div class="accountLevel mdl-cell--12-col"></div>
-                  <div class="accountEmail mdl-cell--12-col"></div>
-                  <div class="accountPhone mdl-cell--12-col"></div>
-                  <div class="accountProvider mdl-cell--12-col"></div>
+                  
+                  <div class=" mdl-cell--12-col mb-3">
+                    <div class="text-secondary">帳戶名稱</div>
+                    <div class="accountName"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">帳戶階級</div>
+                      <div class="accountLevel"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">Email</div>
+                      <div class="accountEmail"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">電話</div>
+                      <div class="accountPhone"></div>
+                  </div>
+                  <div class=" mdl-cell--12-col mb-3">
+                      <div class="text-secondary">登入方式</div>
+                      <div class="accountProvider"></div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="mdl-tabs__panel" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
               <form >
                   <div class="mdl-grid">
-                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
                         <input class="mdl-textfield__input" type="text" id="account-name">
                         <label class="mdl-textfield__label" for="account-name">名字</label>
                       </div>
-                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--11-col-desktop  mdl-cell mdl-cell--middle mdl-cell--12-col">
                           <input class="mdl-textfield__input" type="password" id="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}">
                           <label class="mdl-textfield__label" for="password">密碼</label>
                           <span class="mdl-textfield__error">最少8位 含一個以上英文字母及數字</span>
                       </div>
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-cell mdl-cell--2-col mdl-cell--2-offset-desktop  "
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-cell mdl-cell--middle "
                         type="reset">重置</button>
-                      <div class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-cell mdl-cell--2-col"
+                      <div class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-button--colored  mdl-cell mdl-cell--middle"
                         id="saveProfileChange">儲存改動項目</div>
                     </div>
               </form>
@@ -179,21 +195,15 @@
             </div>
             <div class="mdl-tabs__panel" id="v-pills-others-settings" role="tabpanel" aria-labelledby="v-pills-others-settings-tab">
               <div class="mdl-grid">
-                <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect" data-dismiss="modal"
+                <button type="button" class="mdl-button mdl-js-button mdl-button--raised  mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
                   onclick="if(confirm('確定要刪除你的帳號?這個動作將無法復原'))firebase.auth().currentUser.delete();">刪除帳號</button>
+                  <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised  mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                   onclick="location.href='./news.html'">管理最新消息</button>
+                   <button type="button" class="news-manager-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-cell mdl-cell--middle" data-dismiss="modal"
+                   onclick="location.href='./releaseNews.html'">發布消息</button>
               </div>
             </div>
           </div>
-          <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link active" id="v-pills-account-tab" data-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account"
-                aria-selected="false">帳戶</a>
-              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
-                aria-selected="false">設定</a>
-              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-others-settings" role="tab" aria-controls="v-pills-others-settings"
-                aria-selected="false">其他功能</a>
-            </div>
-            </ul> -->
 
       </div>
       <div class="modal-footer">

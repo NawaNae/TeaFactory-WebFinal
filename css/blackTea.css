@@ -13,22 +13,20 @@
   display: flex;
   flex-direction: column;}
   .list_contain{
-    height: 240px;
+    height: 280px;
   }
   .list {
   justify-content: center;
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
   height: 80px;}
 
 .list2{
   justify-content: center;
   font-size: 16px;
-  height: 40px;
+  height: 50px;
 }
-.link{
-    color: white;
-}
+
 .main-bar{
   display: flex;
   flex-direction: row;
@@ -46,5 +44,15 @@
 }
 .card .card-header {
   color: white; }
-
+.link{
+    color: white;
+}
+.link:havor{
+  color:#bff56e;
+}
+.navBar{
+  color: white;
+padding: 0%;}
+.navBar:hover{
+  color: #bff56e;}
 

@@ -236,14 +236,14 @@ class ScrollController
 NawaNawa.userLevelKey=function(uid)
 {
     var levelUidTable={
-        管理員:['syF5GwOXBcPPhfS6CJ66lbQuOea2','BEhHWgsSTGaJV91kzgNxF2LbUPD2']
+        管理員:['syF5GwOXBcPPhfS6CJ66lbQuOea2','BEhHWgsSTGaJV91kzgNxF2LbUPD2','h8qBvvgcFNhtXkoUnNYFms0Vtqt1']
     };
 
     var levelKey;
     for (var key in levelUidTable)
         if(levelUidTable[key].find(ele=>ele===uid))
             return key;
-    return 'normal';
+    return '使用者';
         
 }
 NawaNawa.userLevel = function(uid)
